@@ -43,12 +43,12 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | CTRL | Br+ |Vol+ |Prev |Play |Next |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT | Br- |Vol- |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+// | SHFT | Br- |Vol- |Mute |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp  TAB  &kp EXCL      &kp AT       &kp HASH    &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &kp C_BRI_UP  &kp K_VOL_UP &kp K_PREV  &kp K_PP  &kp K_NEXT  &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &kp C_BRI_DN  &kp K_VOL_DN &trans      &trans    &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+   &kp LSHFT &kp C_BRI_DN  &kp K_VOL_DN &kp K_MUTE  &trans    &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
                              &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
