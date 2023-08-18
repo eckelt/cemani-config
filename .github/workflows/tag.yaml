@@ -8,7 +8,7 @@ jobs:
     name: Get runner id and tag the current code snapshot
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Tag and push current repo code
         run: |
           git tag ${{github.run_id}}
