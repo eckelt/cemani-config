@@ -43,10 +43,10 @@
 // |     |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                   |     | LWR | SPC |   | ENT | RSE  |     |
                         bindings = <
-   &kp TAB    &kp Q         &kp W       &kp E       &kp R       &kp T    &kp Y  &kp U       &kp I       &kp O       &kp P             &kp BSPC
+   &kp ESC    &kp Q         &kp W       &kp E       &kp R       &kp T    &kp Y  &kp U       &kp I       &kp O       &kp P             &kp BSPC
    &none      &mt LSHIFT A  &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G    &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &mt RSHIFT SEMI  &kp SQT
    &none      &kp Z         &kp X       &kp C       &kp V       &kp B    &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH         &gresc
-                  &none  &mo 1 &sptab   &lt 2 RET &mo 2 &none
+                  &none  &lt 1 TAB  &lt 1 SPACE   &lt 2 RET  &lt 2 BSPC  &none
                         >;
                 };
 // ZMK_LAYER(default_layer,
