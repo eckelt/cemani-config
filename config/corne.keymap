@@ -15,6 +15,9 @@
 
 #define ___ &trans
 #define HYP LS(LC(LA(LGUI)))
+#define sym 2
+#define num 3
+#define nav 4
 
 &mt {
     tapping-term-ms = <220>;
@@ -47,7 +50,7 @@
    &gresc    &kp Q         &kp W       &kp E       &kp R       &kp T    &kp Y  &kp U       &kp I       &kp O       &kp P             &kp BSPC
    &none      &mt LSHIFT A  &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G    &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &mt RSHIFT SEMI  &kp SQT
    &none      &kp Z         &kp X       &kp C       &kp V       &kp B    &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH         &none
-                  &none  &lt 1 TAB  &lt 1 SPACE   &mt HYP RET  &lt 2 BSPC  &none
+                  &to nav  &lt 1 TAB  &kp SPACE   &mt HYP RET  &lt sym BSPC  &to num
                         >;
                 };
 // ZMK_LAYER(default_layer,
@@ -72,7 +75,7 @@
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &kp BSPC
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp F11 &kp F12
    &kp LSHFT  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5         &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &gresc
-                                    ___     ___       &kp SPACE      &kp RET  &trans   &trans
+                                    ___     ___       &to 0      &kp RET  &trans   &trans
                         >;
                 };
 
@@ -86,22 +89,36 @@
    &kp  TAB  &kp EXCL      &kp AT       &kp HASH    &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &kp C_BRI_UP  &kp K_VOL_UP &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp TILDE
    &kp LSHFT &kp C_BRI_DN  &kp K_VOL_DN &kp K_MUTE  &trans    &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp GRAVE
-                             &trans  &trans   &kp SPACE   &kp RET   &trans    &trans
+                                          &trans      &trans    &to 0   &kp RET   &trans    &trans
                         >;
                 };
 
-//                 other_layer {
-// // -----------------------------------------------------------------------------------------
-// // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |     |
-// // |      |     |     |     |     |     |   |     |     |     |     |     |     |
-// // |      |     |     |     |     |     |   |     |     |     |     |     |     |
-// //                    |     |     |     |   |     |     |     |
-//                         bindings = <
-//    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans  &trans  &trans  &trans  &trans  &trans
-//    &trans     &trans       &trans       &trans       &trans       &trans         &trans  &trans  &trans  &trans  &trans  &trans
-//    &trans     &trans       &trans       &trans       &trans       &trans         &trans  &trans  &trans  &trans  &trans  &trans
-//                              &trans  &trans   &trans     j &trans   &trans    &trans
-//                         >;
-//                 };
+                num_layer {
+// -----------------------------------------------------------------------------------------
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |     |
+// |      |     |     |     |     |     |   |     |     |     |     |     |     |
+// |      |     |     |     |     |     |   |     |     |     |     |     |     |
+//                    |     |     |     |   |     |     |     |
+                        bindings = <
+   &trans     &trans       &trans       &trans       &trans       &trans         &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
+   &trans     &trans       &trans       &trans       &trans       &trans         &trans  &kp N4  &kp N5  &kp N7  &trans  &trans
+   &trans     &trans       &trans       &trans       &trans       &trans         &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
+                                          &trans       &trans       &to 0      &trans   &trans  &kp N0
+                        >;
+                };
+
+                nav_layer {
+// -----------------------------------------------------------------------------------------
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |     |
+// |      |     |     |     |     |     |   |     |     |     |     |     |     |
+// |      |     |     |     |     |     |   |     |     |     |     |     |     |
+//                    |     |     |     |   |     |     |     |
+                        bindings = <
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans     &trans     &trans    &trans     &trans    &trans
+   &trans     &trans       &trans       &trans       &trans       &trans         &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans    &trans
+   &trans     &trans       &trans       &trans       &trans       &trans         &trans     &trans     &trans    &trans     &trans    &trans
+                                          &trans       &trans       &to 0     &trans     &trans     &trans
+                        >;
+                };
         };
 };
