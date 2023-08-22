@@ -26,22 +26,13 @@
 };
 
 / {
-    behaviors {
-        sptab: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <220>;
-            bindings = <&kp SPACE>, <&kp TAB>;
-        };
-    };
-
         keymap {
                 compatible = "zmk,keymap";
 
 // ZMK_COMBO(esc,  &kp ESC, 0 1, ALL, 25);
 
                 default_layer {
+                        label = "Base";
 // -----------------------------------------------------------------------------------------
 // | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // |     |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -50,7 +41,7 @@
                         bindings = <
    &none      &kp Q         &kp W       &kp E       &kp R       &kp T    &kp Y  &kp U       &kp I       &kp O       &kp P             &none
    &none      &mt LSHIFT A  &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G    &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &mt RSHIFT SEMI  &kp SQT
-   &none     &kp Z         &kp X       &kp C       &kp V       &kp B    &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH         &none
+   &none      &kp Z         &kp X       &kp C       &kp V       &kp B    &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH         &none
                   &lt nav ESC  &lt fun TAB  &sptab   &mt HYP RET  &kp BSPC  &to sym
                         >;
                 };
@@ -67,20 +58,22 @@
 // );
 
                 lower_layer {
+                        label = "Fun";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT | F11 | F12  |
 // | SHFT | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | ESC  |
 //                    |     |     | SPC |   | ENT |     |     |
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &kp BSPC
+   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &none
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp F11 &kp F12
-   &kp LSHFT  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5         &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &gresc
+   &kp LSHFT  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5         &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &none
                                     ___     ___       &to 0      &kp RET  &trans   &to nav
                         >;
                 };
 
                 raise_layer {
+                        label = "Sym";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | CTRL | Br+ |Vol+ |Prev |Play |Next |   |  -  |  =  |  [  |  ]  |  \  |  ~   |
@@ -95,6 +88,7 @@
                 };
 
                 num_layer {
+                        label = "Num";
 // -----------------------------------------------------------------------------------------
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |     |
 // |      |     |     |     |     |     |   |     |     |     |     |     |     |
@@ -109,13 +103,14 @@
                 };
 
                 nav_layer {
+                        label = "Nav";
 // -----------------------------------------------------------------------------------------
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |     |
 // |      |     |     |     |     |     |   |     |     |     |     |     |     |
 // |      |     |     |     |     |     |   |     |     |     |     |     |     |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans     &trans     &trans    &trans     &trans    &trans
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans     &trabbns     &trans    &trans     &trans    &trans
    &trans     &trans       &trans       &trans       &trans       &trans         &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans    &trans
    &trans     &trans       &trans       &trans       &trans       &trans         &trans     &trans     &trans    &trans     &trans    &trans
                                           &sys_reset       &trans       &to 0     &trans     &trans     &sys_reset
