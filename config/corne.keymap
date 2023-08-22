@@ -32,9 +32,9 @@
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
-                        = <&macro_press &kp ALT>
+                        = <&macro_press &kp LALT>
                         , <&macro_tap &kp U>
-                        , <&macro_release &kp ALT>
+                        , <&macro_release &kp LALT>
                         , <&macro_tap &kp A>
                         ;
                 };
