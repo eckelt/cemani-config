@@ -79,7 +79,7 @@
    &zed_em_kay      &kp Z         &kp X       &kp C       &kp V       &kp B    &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH         &none
                   &lt nav ESC  &lt fun TAB  &kp SPACE   &mt HYP RET  &kp BSPC  &mo sym
                         >;
-                };j
+                };
 
                 lower_layer {
                         label = "Fun";
