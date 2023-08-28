@@ -56,7 +56,7 @@
                 compatible = "zmk,behavior-mod-morph";
                 label = "GRAVE_ESCAPE";
                 #binding-cells = <0>;
-                bindings = <&kp A>, <&zed_em_kayG>;
+                bindings = <&kp A>, <&zed_em_kay>;
                 mods = <(MOD_LALT|MOD_RALT)>;
                 };
         };
