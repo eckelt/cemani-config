@@ -10,6 +10,11 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define HOST_OS 2
+// activate macOS-mode for helper script
+#undef OS_UNICODE_LEAD
+#undef OS_UNICODE_TRAIL
+#define OS_UNICODE_LEAD &macro_press &kp LALT  // <- macOS compose sequence (must be activated in system preferences)
+#define OS_UNICODE_TRAIL &macro_release &kp LALT  // <- Releasing Left-Alt terminates unicode input on macOns
 #include "../nodefree/helper.h"
 #include "../nodefree/keypos_def/keypos_42keys.h"
 #include "../nodefree/international_chars/german.dtsi"
@@ -31,6 +36,11 @@
 // tap: backspace | shift + tap: delete | hold: num layer
 ZMK_BEHAVIOR(bs_del, mod_morph,
     bindings = <&kp BSPC>, <&kp DEL>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+ZMK_BEHAVIOR(sft_a_ae, mod_morph,
+    bindings = <&mt LSHIFT A>, <&de_ae>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
@@ -78,9 +88,9 @@ ZMK_BEHAVIOR(bs_del, mod_morph,
 // |     |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |      |
 //                   |     | LWR | SPC |   | ENT | RSE  |     |
                         bindings = <
-   ___       &kp Q         &kp W       &eur       &kp R       &kp T    &kp Y  &kp U       &kp I       &kp O       &kp P             &none
-   &a_uml     &mt LSHIFT A  &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G    &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &mt RSHIFT SEMI  &kp SQT
-   &de_ae      &kp Z         &kp X       &kp C       &kp V       &kp B    &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH         &none
+   ___   &kp Q      &kp W       &eur        &kp R       &kp T    &kp Y  &de_ue       &kp I       &de_oe       &kp P             &none
+   ___   &sft_a_ae  &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G    &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &mt RSHIFT SEMI  &kp SQT
+   ___   &kp Z      &kp X       &kp C       &kp V       &kp B    &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH         &none
                   &lt nav ESC  &lt fun TAB  &kp SPACE   &mt HYP RET  &bs_del  &mo sym
                         >;
                 };
