@@ -45,7 +45,14 @@ ZMK_BEHAVIOR(sft_a_ae, mod_morph,
 )
 
 / {
-
+    combos {
+        compatible = "zmk,combos";
+        combo_power1 {
+            timeout-ms = <50>;
+            key-positions = <LT0 LT1 LT2>;
+            bindings = <&kp K_POWER>;
+        };
+    };
         behaviors {
             a_uml: a_uml {
                 compatible = "zmk,behavior-mod-morph";
