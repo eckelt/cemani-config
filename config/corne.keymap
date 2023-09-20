@@ -37,17 +37,17 @@ ZMK_UNICODE_SINGLE( de_eszett,  KP_N0, KP_N2, KP_N2, KP_N3)
         combo_oe {
             timeout-ms = <50>;
             key-positions = <21 10>;
-            bindings = <&kp de_oe>;
+            bindings = <&kp &de_oe>;
         };
         combo_ae {
             timeout-ms = <50>;
             key-positions = <21 14>;
-            bindings = <&kp de_ae>;
+            bindings = <&kp &de_ae>;
         };
         combo_ue {
             timeout-ms = <50>;
             key-positions = <21 8>;
-            bindings = <&kp de_ue>;
+            bindings = <&kp &de_ue>;
         };
     };
 
