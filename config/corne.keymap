@@ -71,9 +71,9 @@ ZMK_BEHAVIOR(bs_del_num, mod_morph,
 // |     |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |      |
 //                   |     | LWR | SPC |   | ENT | RSE  |     |
                         bindings = <
-   &lt       &kp Q         &kp W       &kp E       &kp R       &kp T    &kp Y  &kp U       &kp I       &kp O       &kp P             &none
+   ___       &kp Q         &kp W       &kp E       &kp R       &kp T    &kp Y  &kp U       &kp I       &kp O       &kp P             &none
    &a_uml     &mt LSHIFT A  &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G    &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &mt RSHIFT SEMI  &kp SQT
-   &ae      &kp Z         &kp X       &kp C       &kp V       &kp B    &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH         &none
+   ___      &kp Z         &kp X       &kp C       &kp V       &kp B    &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH         &none
                   &lt nav ESC  &lt fun TAB  &kp SPACE   &mt HYP RET  &bs_del_num  &mo sym
                         >;
                 };
