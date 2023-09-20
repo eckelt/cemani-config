@@ -25,24 +25,26 @@
     flavor = "tap-preferred";
 };
 
-/* German umlauts for Windows-Alt-Codes */
-ZMK_UNICODE_PAIR(   de_ae,      KP_N0, KP_N2, KP_N2, KP_N8,    KP_N0, KP_N1, KP_N9, KP_N6)
-ZMK_UNICODE_PAIR(   de_oe,      KP_N0, KP_N2, KP_N4, KP_N6,    KP_N0, KP_N2, KP_N1, KP_N4)
-ZMK_UNICODE_PAIR(   de_ue,      KP_N0, KP_N2, KP_N5, KP_N2,    KP_N0, KP_N2, KP_N2, KP_N0)
-ZMK_UNICODE_SINGLE( de_eszett,  KP_N0, KP_N2, KP_N2, KP_N3)
 
 / {
+
+    /* German umlauts for Windows-Alt-Codes */
+    ZMK_UNICODE_PAIR(   de_ae,      KP_N0, KP_N2, KP_N2, KP_N8,    KP_N0, KP_N1, KP_N9, KP_N6)
+    ZMK_UNICODE_PAIR(   de_oe,      KP_N0, KP_N2, KP_N4, KP_N6,    KP_N0, KP_N2, KP_N1, KP_N4)
+    ZMK_UNICODE_PAIR(   de_ue,      KP_N0, KP_N2, KP_N5, KP_N2,    KP_N0, KP_N2, KP_N2, KP_N0)
+    ZMK_UNICODE_SINGLE( de_eszett,  KP_N0, KP_N2, KP_N2, KP_N3)
+
     combos {
         compatible = "zmk,combos";
-        combo_oe {
-            timeout-ms = <50>;
-            key-positions = <21 10>;
-            bindings = <&kp &de_oe>;
-        };
         combo_ae {
             timeout-ms = <50>;
             key-positions = <21 14>;
             bindings = <&kp &de_ae>;
+        };
+        combo_oe {
+            timeout-ms = <50>;
+            key-positions = <21 10>;
+            bindings = <&kp &de_oe>;
         };
         combo_ue {
             timeout-ms = <50>;
@@ -99,12 +101,27 @@ ZMK_UNICODE_SINGLE( de_eszett,  KP_N0, KP_N2, KP_N2, KP_N3)
 // |     |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |      |
 //                   |     | LWR | SPC |   | ENT | RSE  |     |
                         bindings = <
-   &none      &kp Q         &kp W       &kp E       &kp R       &kp T    &kp Y  &kp U       &kp I       &kp O       &kp P             &none
+   &lt       &kp Q         &kp W       &kp E       &kp R       &kp T    &kp Y  &kp U       &kp I       &kp O       &kp P             &none
    &a_uml     &mt LSHIFT A  &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G    &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &mt RSHIFT SEMI  &kp SQT
    &ae      &kp Z         &kp X       &kp C       &kp V       &kp B    &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH         &none
                   &lt nav ESC  &lt fun TAB  &kp SPACE   &mt HYP RET  &kp BSPC  &mo sym
                         >;
                 };
+
+//                 umlauts_layer {
+//                         label = "umlauts";
+// // -----------------------------------------------------------------------------------------
+// // | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// // |     |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// // |     |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |      |
+// //                   |     | LWR | SPC |   | ENT | RSE  |     |
+//                         bindings = <
+//    ___  ___         ___  ___  ___  ___     ___  &kp &de_ue  ___  &kp &de_oe  ___  ___ 
+//    ___  &kp &de_ae  ___  ___  ___  ___     ___  ___         ___  ___         ___  ___
+//    ___  ___         ___  ___  ___  ___     ___  ___         ___  ___         ___  ___
+//                          ___  ___  ___     ___  ___         ___  
+//                         >;
+//                 };
 
                 lower_layer {
                         label = "Fun";
