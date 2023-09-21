@@ -44,7 +44,7 @@ ZMK_BEHAVIOR(sft_a_ae, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
-ZMK_COMBO(esc,  &kp ESC, 0 1, ALL, 25)
+ZMK_COMBO(esc,  &kp ESC, 1 2, ALL, 25)
 ZMK_COMBO(power1, &kp C_POWER, 3 4 5, ALL, 50)
 ZMK_COMBO(power2, &kp K_POWER, 6 7 8, ALL, 50)
 ZMK_COMBO(one, &kp N1, 1 13, ALL, 50)
