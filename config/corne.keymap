@@ -44,18 +44,19 @@ ZMK_BEHAVIOR(sft_a_ae, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
-ZMK_COMBO(combo_esc, 1, 2, <&kp ESC>)
-ZMK_COMBO(combo_power1, 3, 4, 5, <&kp C_POWER>)
-ZMK_COMBO(one, 1 13, <&kp N1>)
-ZMK_COMBO(two, 2 14, <&kp N2>)
-ZMK_COMBO(tre, 3 15, <&kp N3>)
-ZMK_COMBO(for, 4 16, <&kp N4>)
-ZMK_COMBO(fiv, 5 17, <&kp N5>)
-ZMK_COMBO(six, 6 18, <&kp N6>)
-ZMK_COMBO(svn, 7 19, <&kp N7>)
-ZMK_COMBO(egt, 8 20, <&kp N8>)
-ZMK_COMBO(nin, 9 21, <&kp N9>)
-ZMK_COMBO(zro, 10 22, <&kp N0>)
+ZMK_COMBO(esc, <&kp ESC>, 1 2, ALL)
+ZMK_COMBO(power1, <&kp C_POWER>, 3 4 5, ALL)
+ZMK_COMBO(power2, <&kp C_POWER>, 6 7 8, ALL)
+ZMK_COMBO(one, <&kp N1>, 1 13)
+ZMK_COMBO(two, <&kp N2>, 2 14)
+ZMK_COMBO(tre, <&kp N3>, 3 15)
+ZMK_COMBO(for, <&kp N4>, 4 16)
+ZMK_COMBO(fiv, <&kp N5>, 5 17)
+ZMK_COMBO(six, <&kp N6>, 6 18)
+ZMK_COMBO(svn, <&kp N7>, 7 19)
+ZMK_COMBO(egt, <&kp N8>, 8 20)
+ZMK_COMBO(nin, <&kp N9>, 9 21)
+ZMK_COMBO(zro, <&kp N0>, 10 22)
 
 / {
 
