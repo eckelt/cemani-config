@@ -44,20 +44,21 @@ ZMK_BEHAVIOR(sft_a_ae, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
+ZMK_COMBO(combo_esc, 1, 2, <&kp ESC>)
+ZMK_COMBO(combo_power1, 3, 4, 5, <&kp C_POWER>)
+ZMK_COMBO(one, 1 13, <&kp N1>)
+ZMK_COMBO(two, 2 14, <&kp N2>)
+ZMK_COMBO(tre, 3 15, <&kp N3>)
+ZMK_COMBO(for, 4 16, <&kp N4>)
+ZMK_COMBO(fiv, 5 17, <&kp N5>)
+ZMK_COMBO(six, 6 18, <&kp N6>)
+ZMK_COMBO(svn, 7 19, <&kp N7>)
+ZMK_COMBO(egt, 8 20, <&kp N8>)
+ZMK_COMBO(nin, 9 21, <&kp N9>)
+ZMK_COMBO(zro, 10 22, <&kp N0>)
+
 / {
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            bindings = <&kp ESC>;
-        };
-        combo_power1 {
-            timeout-ms = <50>;
-            key-positions = <3 4 5>;
-            bindings = <&kp C_POWER>;
-        };
-    };
+
         behaviors {
             a_uml: a_uml {
                 compatible = "zmk,behavior-mod-morph";
