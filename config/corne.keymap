@@ -69,7 +69,7 @@ ZMK_COMBO(zro, &kp N0, 10 22, ALL, 50)
             label = "UC_NTIL_CAP";
             #binding-cells = <0>;
             bindings = <&macro_press &kp RA(U) &macro_release &kp A>;
-        }
+        };
     };
 
         behaviors {
