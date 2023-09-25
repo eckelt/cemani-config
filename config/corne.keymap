@@ -108,8 +108,8 @@ ZMK_COMBO(zro, &kp N0, 10 22, ALL, 50)
 
                 default_layer {
                         label = "Base";
-// -----------------------------------------------------------------------------------------
-// | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// -----------ESC---------------------------------------------------------------------------
+// |     |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |      |
 // |     |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // |     |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |      |
 //                   |     | LWR | SPC |   | ENT | RSE  |     |
@@ -189,9 +189,9 @@ ZMK_COMBO(zro, &kp N0, 10 22, ALL, 50)
 // |      |     |     |     |     |     |   |     |     |     |     |     |     |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans     &trans     &trans    &trans     &trans    &trans
-   &out OUT_TOG &trans       &trans       &trans       &trans       &trans         &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans    &trans
-   &trans       &trans       &trans       &trans       &trans       &trans         &trans     &trans     &trans    &trans     &trans    &trans
+   &trans    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans    &trans
+   &trans    &out OUT_TOG &trans       &trans       &trans       &bt BT_CLR     &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &trans    &trans
+   &trans    &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &kp K_REDO     &trans     &trans         &trans       &trans     &trans    &trans
                                           &sys_reset       &trans       &to 0     &trans     &trans     &sys_reset
                         >;
                 };
