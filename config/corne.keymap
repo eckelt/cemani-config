@@ -57,6 +57,19 @@ ZMK_COMBO(svn, &kp N7, 7 19, ALL, 50)
 ZMK_COMBO(egt, &kp N8, 8 20, ALL, 50)
 ZMK_COMBO(nin, &kp N9, 9 21, ALL, 50)
 ZMK_COMBO(zro, &kp N0, 10 22, ALL, 50)
+ZMK_COMBO(one, &kp F1, 13 25, ALL, 50)
+ZMK_COMBO(two, &kp F2, 14 26, ALL, 50)
+ZMK_COMBO(tre, &kp F3, 15 27, ALL, 50)
+ZMK_COMBO(for, &kp F4, 16 28, ALL, 50)
+ZMK_COMBO(fiv, &kp F5, 17 29, ALL, 50)
+ZMK_COMBO(six, &kp F6, 18 30, ALL, 50)
+ZMK_COMBO(svn, &kp F7, 19 31, ALL, 50)
+ZMK_COMBO(egt, &kp F8, 20 32, ALL, 50)
+ZMK_COMBO(nin, &kp F9, 21 33, ALL, 50)
+ZMK_COMBO(zro, &kp F10, 22 34, ALL, 50)
+ZMK_COMBO(zro, &kp GRAVE, 9 10, ALL, 50)
+ZMK_COMBO(zro, &kp SQT, 21 22, ALL, 50)
+ZMK_COMBO(zro, &kp TILDEa, 33 34, ALL, 50)
 
 / {
 
@@ -121,21 +134,6 @@ ZMK_COMBO(zro, &kp N0, 10 22, ALL, 50)
                         >;
                 };
 
-//                 umlauts_layer {
-//                         label = "umlauts";
-// // -----------------------------------------------------------------------------------------
-// // | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// // |     |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// // |     |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |      |
-// //                   |     | LWR | SPC |   | ENT | RSE  |     |
-//                         bindings = <
-//    ___  ___         ___  ___  ___  ___     ___  &kp &de_ue  ___  &kp &de_oe  ___  ___ 
-//    ___  &kp &de_ae  ___  ___  ___  ___     ___  ___         ___  ___         ___  ___
-//    ___  ___         ___  ___  ___  ___     ___  ___         ___  ___         ___  ___
-//                          ___  ___  ___     ___  ___         ___  
-//                         >;
-//                 };
-
                 lower_layer {
                         label = "Fun";
 // -----------------------------------------------------------------------------------------
@@ -159,7 +157,7 @@ ZMK_COMBO(zro, &kp N0, 10 22, ALL, 50)
 // | SHFT | Br- |Vol- |Mute |     |     |   |  _  |  +  |  {  |  }  | "|" |  `   |
 //                    |     |     | SPC |   | ENT |     |     |
                         bindings = <
-   &kp  TAB  &kp EXCL      &kp AT       &kp HASH    &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
+   &kp  TAB  &kp EXCL      &kp AT       &kp HASH    &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR ___
    &kp LCTRL &kp C_BRI_UP  &kp K_VOL_UP &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp TILDE
    &kp LSHFT &kp C_BRI_DN  &kp K_VOL_DN &kp K_MUTE  &trans    &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp GRAVE
                                           &trans      &trans    &to 0   &kp RET   &trans    &to num
@@ -195,5 +193,20 @@ ZMK_COMBO(zro, &kp N0, 10 22, ALL, 50)
                                           &sys_reset       &trans       &to 0     &trans     &trans     &sys_reset
                         >;
                 };
+
+//                 umlauts_layer {
+//                         label = "umlauts";
+// // -----------------------------------------------------------------------------------------
+// // | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// // |     |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// // |     |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |      |
+// //                   |     | LWR | SPC |   | ENT | RSE  |     |
+//                         bindings = <
+//    ___  ___         ___  ___  ___  ___     ___  &kp &de_ue  ___  &kp &de_oe  ___  ___ 
+//    ___  &kp &de_ae  ___  ___  ___  ___     ___  ___         ___  ___         ___  ___
+//    ___  ___         ___  ___  ___  ___     ___  ___         ___  ___         ___  ___
+//                          ___  ___  ___     ___  ___         ___  
+//                         >;
+//                 };
         };
 };
