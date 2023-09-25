@@ -60,24 +60,24 @@ ZMK_COMBO(zro, &kp N0, 10 22, ALL, 50)
 
 / {
 
-    macros {
+    // macros {
 
-        ae: ae {  // n-tilde
-            wait-ms = <5>;
-            tap-ms = <5>;
-            compatible = "zmk,behavior-macro";
-            label = "UC_NTIL_CAP";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp RA(U) &macro_release &kp A>;
-        };
-    };
+    //     ae: ae {  // n-tilde
+    //         wait-ms = <5>;
+    //         tap-ms = <5>;
+    //         compatible = "zmk,behavior-macro";
+    //         label = "UC_NTIL_CAP";
+    //         #binding-cells = <0>;
+    //         bindings = <&macro_press &kp RA(U) &macro_release &kp A>;
+    //     };
+    // };
 
         behaviors {
             a_uml: a_uml {
                 compatible = "zmk,behavior-mod-morph";
                 label = "A umlaut";
                 #binding-cells = <0>;
-                bindings = <&kp A>, <&ae>;
+                bindings = <&kp A>, <&de_ae>;
                 mods = <(MOD_LALT|MOD_RALT)>;
             };
             o_uml: o_uml {
