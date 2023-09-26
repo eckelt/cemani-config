@@ -84,6 +84,69 @@ ZMK_COMBO(tld, &kp TILDE, 33 34, ALL, 50)
     //         bindings = <&macro_press &kp RA(U) &macro_release &kp A>;
     //     };
     // };
+    macros {
+        auml: auml {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_tap &kp U>
+                , <&macro_release &kp RALT>
+                , <&macro_tap &kp a>
+                ;
+        };
+        copy: undo {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RGUI>
+                , <&macro_tap &kp Z>
+                , <&macro_release &kp RGUI>
+                ;
+        };
+        copy: cut {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RGUI>
+                , <&macro_tap &kp X>
+                , <&macro_release &kp RGUI>
+                ;
+        };
+        copy: copy {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RGUI>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp RGUI>
+                ;
+        };
+        paste: paste {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RGUI>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp RGUI>
+                ;
+        };
+        redo: redo {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RGUI>
+                , <&macro_tap &kp Y>
+                , <&macro_release &kp RGUI>
+                ;
+        };
+    };
 
         behaviors {
             a_uml: a_uml {
@@ -157,9 +220,9 @@ ZMK_COMBO(tld, &kp TILDE, 33 34, ALL, 50)
 // | SHFT | Br- |Vol- |Mute |     |     |   |  _  |  +  |  {  |  }  | "|" |  `   |
 //                    |     |     | SPC |   | ENT |     |     |
                         bindings = <
-   &kp  TAB  &kp EXCL      &kp AT       &kp HASH    &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR ___
-   &kp LCTRL &kp C_BRI_UP  &kp K_VOL_UP &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp TILDE
-   &kp LSHFT &kp C_BRI_DN  &kp K_VOL_DN &kp K_MUTE  &trans    &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp GRAVE
+   &kp  TAB  &kp EXCL      &kp AT       &kp HASH    &kp DLLR  &kp PRCNT     &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR ___
+   &kp LCTRL &kp C_BRI_UP  &kp K_VOL_UP &kp C_PREV  &kp C_PP  &kp C_NEXT    &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp TILDE
+   &kp LSHFT &kp C_BRI_DN  &kp K_VOL_DN &kp K_MUTE  &trans    &auml         &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp GRAVE
                                           &trans      &trans    &to 0   &kp RET   &trans    &to num
                         >;
                 };
@@ -189,7 +252,7 @@ ZMK_COMBO(tld, &kp TILDE, 33 34, ALL, 50)
                         bindings = <
    &trans    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans    &trans
    &trans    &out OUT_TOG &trans       &trans       &trans       &bt BT_CLR     &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &trans    &trans
-   &trans    &kp C_AC_UNDO   &kp C_AC_CUT    &kp C_AC_COPY   &kp C_AC_PASTE  &kp C_AC_REDO     &trans     &trans         &trans       &trans     &trans    &trans
+   &trans    &undo        &cut         &copy        &paste       &redo          &trans     &trans         &trans       &trans     &trans    &trans
                                           &sys_reset       &trans       &to 0     &trans     &trans     &sys_reset
                         >;
                 };
