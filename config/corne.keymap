@@ -96,7 +96,7 @@ ZMK_COMBO(tld, &kp TILDE, 33 34, ALL, 50)
                 , <&macro_tap &kp A>
                 ;
         };
-        copy: undo {
+        undo: undo {
             label = "ZM_zed_em_kay";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -106,7 +106,7 @@ ZMK_COMBO(tld, &kp TILDE, 33 34, ALL, 50)
                 , <&macro_release &kp RGUI>
                 ;
         };
-        copy: cut {
+        cut: cut {
             label = "ZM_zed_em_kay";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
