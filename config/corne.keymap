@@ -93,7 +93,7 @@ ZMK_COMBO(tld, &kp TILDE, 33 34, ALL, 50)
                 = <&macro_press &kp RALT>
                 , <&macro_tap &kp U>
                 , <&macro_release &kp RALT>
-                , <&macro_tap &kp a>
+                , <&macro_tap &kp A>
                 ;
         };
         copy: undo {
