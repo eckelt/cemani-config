@@ -75,6 +75,7 @@ ZMK_COMBO(tld, &kp TILDE, 33 34, ALL, 50)
 
     macros {
         auml: auml {
+            label = "a umlaut";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -85,6 +86,7 @@ ZMK_COMBO(tld, &kp TILDE, 33 34, ALL, 50)
                 ;
         };
         undo: undo {
+            label = "undo";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -94,6 +96,7 @@ ZMK_COMBO(tld, &kp TILDE, 33 34, ALL, 50)
                 ;
         };
         cut: cut {
+            label = "cut";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -103,6 +106,7 @@ ZMK_COMBO(tld, &kp TILDE, 33 34, ALL, 50)
                 ;
         };
         copy: copy {
+            label = "copy";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -112,6 +116,7 @@ ZMK_COMBO(tld, &kp TILDE, 33 34, ALL, 50)
                 ;
         };
         paste: paste {
+            label = "paste";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -121,6 +126,7 @@ ZMK_COMBO(tld, &kp TILDE, 33 34, ALL, 50)
                 ;
         };
         redo: redo {
+            label = "redo";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
