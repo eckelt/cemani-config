@@ -144,14 +144,32 @@ ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
                 , <&macro_tap &kp A>
                 ;
         };
+        Ae: Ae {
+            label = "Ae";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_tap &kp U>
+                , <&macro_release &kp RALT>
+                , <&macro_tap &kp LS(A)>
+                ;
+        };
     };
 
         behaviors {
+            mod_ae: mod_ae {
+                compatible = "zmk,behavior-mod-morph";
+                label = "Ae";
+                #binding-cells = <0>;
+                bindings = <&ae>, <&Ae>;
+                mods = <(MOD_LSHIFT|MOD_RSHIFT)>;
+            };
             a_uml: a_uml {
                 compatible = "zmk,behavior-mod-morph";
                 label = "A umlaut";
                 #binding-cells = <0>;
-                bindings = <&kp A>, <&de_ae>;
+                bindings = <&kp A>, <&mod_ae>;
                 mods = <(MOD_LALT|MOD_RALT)>;
             };
             o_uml: o_uml {
