@@ -137,6 +137,7 @@ ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
             label = "ae_lc";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            tap-ms = <10>;
             bindings
                 = <&macro_press &kp RALT>
                 , <&macro_tap &kp U>
@@ -148,6 +149,7 @@ ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
             label = "ae_uc";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            tap-ms = <10>;
             bindings
                 = <&macro_press &kp RALT>
                 , <&macro_tap &kp U>
