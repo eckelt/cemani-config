@@ -133,8 +133,8 @@ ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
                 , <&macro_release &kp RGUI>
                 ;
         };
-        ae: ae {
-            label = "ae";
+        ae_lc: ae_lc {
+            label = "ae_lc";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -144,8 +144,8 @@ ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
                 , <&macro_tap &kp A>
                 ;
         };
-        Ae: Ae {
-            label = "Ae";
+        ae_uc: ae_uc {
+            label = "ae_uc";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -162,7 +162,7 @@ ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
                 compatible = "zmk,behavior-mod-morph";
                 label = "Ae";
                 #binding-cells = <0>;
-                bindings = <&ae>, <&Ae>;
+                bindings = <&ae_lc>, <&ae_uc>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
             a_uml: a_uml {
