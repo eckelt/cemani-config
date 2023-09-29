@@ -44,7 +44,7 @@ ZMK_BEHAVIOR(sft_a_ae, mod_morph,
 )
 
 ZMK_COMBO(esc,  &kp ESC, 1 2, ALL, 25)
-ZMK_COMBO(power1, &kp C_POWER, 3 4 5, ALL, 50)
+ZMK_COMBO(power1, &kp K_COFFEE, 3 4 5, ALL, 50)
 ZMK_COMBO(power2, &kp K_POWER, 6 7 8, ALL, 50)
 ZMK_COMBO(one, &kp N1, 1 13, ALL, 50)
 ZMK_COMBO(two, &kp N2, 2 14, ALL, 50)
@@ -175,13 +175,13 @@ ZMK_COMBO(rstr, &sys_reset, 39 40 41, ALL, 50)
                 default_layer {
                         label = "Base";
 // -----------ESC---------------------------------------------------------------------------
-// |     |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |      |
-// |     |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// |     |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |      |
+// |    |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |    |
+// |    |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |    |
+// |    |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |    |
 //                   |     | LWR | SPC |   | ENT | RSE  |     |
                         bindings = <
-   ___  &kp Q       &kp W       &kp E       &kp R       &kp T         &kp Y  &kp U       &kp I       &kp O        &kp P            ___
-   ___  &mt LSHFT A &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G         &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &mt RSHIFT SEMI  ___
+   ___  &kp Q       &kp W       &eur       &kp R       &kp T         &kp Y  &kp U       &kp I       &kp O        &kp P            ___
+   ___  &mt LSHFT &a_uml &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G         &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &mt RSHIFT SEMI  ___
    ___  &kp Z       &kp X       &kp C       &kp V       &kp B         &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH         ___
                              &lt num ESC  &lt nav TAB  &kp SPACE    &mt HYP RET  &bs_del  &mo sym
                         >;
@@ -190,14 +190,14 @@ ZMK_COMBO(rstr, &sys_reset, 39 40 41, ALL, 50)
                 raise_layer {
                         label = "Sym";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL | Br+ |Vol+ |Prev |Play |Next |   |  -  |  =  |  [  |  ]  |  \  |  ~   |
-// | SHFT | Br- |Vol- |Mute |     |     |   |  _  |  +  |  {  |  }  | "|" |  `   |
+// |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  (  |  )  |  `  |    |
+// |    | Br+ |Vol+ |Prev |Play |Next |   |  '  |  "  |  [  |  ]  |  \  |    |
+// |    | Br- |Vol- |Mute |     |     |   |  _  |  *  |  {  |  }  | "|" |    |
 //                    |     |     | SPC |   | ENT |     |     |
                         bindings = <
    ___  &kp EXCL      &kp AT        &kp HASH    &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS  &kp LPAR  &kp RPAR  &kp GRAVE  ___
    ___  &kp C_BRI_UP  &kp K_VOL_UP  &kp C_PREV  &kp C_PP  &kp C_NEXT    &kp SQT    &kp DQT   &kp LBKT  &kp RBKT  &kp BSLH   ___
-   ___  &kp C_BRI_DN  &kp K_VOL_DN  &kp K_MUTE  &trans    &auml         &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE   ___
+   ___  &kp C_BRI_DN  &kp K_VOL_DN  &kp K_MUTE  &trans    &auml         &kp UNDER  &kp STAR  &kp LBRC  &kp RBRC  &kp PIPE   ___
                                                        ___  ___  ___   ___  ___  ___
                         >;
                 };
@@ -205,9 +205,9 @@ ZMK_COMBO(rstr, &sys_reset, 39 40 41, ALL, 50)
                 num_layer {
                         label = "NumPad";
 // -----------------------------------------------------------------------------------------
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |  *  |  7  |  8  |  9  |  +  |     |
-// |      |     |     |     |     |     |   |  /  |  4  |  5  |  6  |  -  |     |
-// |      |     |     |     |     |     |   |  \  |  1  |  2  |  3  |  =  |     |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |  *  |  7  |  8  |  9  |  +  |    |
+// |      |     |     |     |     |     |   |  /  |  4  |  5  |  6  |  -  |    |
+// |      |     |     |     |     |     |   |  \  |  1  |  2  |  3  |  =  |    |
 //                    |     |     |     |   |  .  |   ,  |  0  |
                         bindings = <
    ___  ___  ___  ___  ___  ___      &kp STAR  &kp N7  &kp N8  &kp N9  &kp PLUS   ___
