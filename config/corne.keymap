@@ -69,6 +69,8 @@ ZMK_COMBO(ten, &kp F10, 22 34, ALL, 50)
 ZMK_COMBO(grv, &kp GRAVE, 9 10, ALL, 50)
 ZMK_COMBO(sqt, &kp SQT, 21 22, ALL, 50)
 ZMK_COMBO(tld, &kp TILDE, 33 34, ALL, 50)
+ZMK_COMBO(rstl, &sys_reset, 36 37 38, ALL, 50)
+ZMK_COMBO(rstr, &sys_reset, 39 40 41, ALL, 50)
 
 / {
 
