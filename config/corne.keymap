@@ -224,7 +224,7 @@ ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
    ___  &kp EXCL      &kp AT        &kp HASH    &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS  &kp LPAR  &kp RPAR  &kp GRAVE  ___
    ___  &kp C_BRI_UP  &kp K_VOL_UP  &kp C_PREV  &kp C_PP  &kp C_NEXT    &kp SQT    &kp DQT   &kp LBKT  &kp RBKT  &kp BSLH   ___
    ___  &kp C_BRI_DN  &kp K_VOL_DN  &kp K_MUTE  ___       ___           &kp UNDER  &kp STAR  &kp LBRC  &kp RBRC  &kp PIPE   ___
-                                                       &auml  &a_uml  &de_ae   &ae  ___  ___
+                                                       &auml  &a_uml  &de_ae   &mod_ae  ___  ___
                         >;
                 };
 
