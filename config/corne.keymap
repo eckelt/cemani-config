@@ -163,7 +163,7 @@ ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
                 label = "Ae";
                 #binding-cells = <0>;
                 bindings = <&ae>, <&Ae>;
-                mods = <(MOD_LSHIFT|MOD_RSHIFT)>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
             };
             a_uml: a_uml {
                 compatible = "zmk,behavior-mod-morph";
