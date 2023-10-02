@@ -46,26 +46,26 @@ ZMK_BEHAVIOR(sft_a_ae, mod_morph,
 ZMK_COMBO(esc,  &kp ESC, LT4 LT3, ALL, 25)
 ZMK_COMBO(power1, &kp K_COFFEE, LT0 LT1 LT2, ALL, 50)
 ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
-ZMK_COMBO(one, &kp N1, LT4 LM4, ALL, 50)
-ZMK_COMBO(two, &kp N2, LT3 LM3, ALL, 50)
-ZMK_COMBO(tre, &kp N3, LT2 LM2, ALL, 50)
-ZMK_COMBO(for, &kp N4, LT1 LM1, ALL, 50)
-ZMK_COMBO(fiv, &kp N5, LT0 LM0, ALL, 50)
-ZMK_COMBO(six, &kp N6, RT0 RM0, ALL, 50)
-ZMK_COMBO(svn, &kp N7, RT1 RM1, ALL, 50)
-ZMK_COMBO(egt, &kp N8, RT2 RM2, ALL, 50)
-ZMK_COMBO(nin, &kp N9, RT3 RM3, ALL, 50)
-ZMK_COMBO(zro, &kp N0, RT4 RM4, ALL, 50)
-ZMK_COMBO(fone, &kp F1, LM4 LB4, ALL, 50)
-ZMK_COMBO(ftwo, &kp F2, LM3 LB3, ALL, 50)
-ZMK_COMBO(ftre, &kp F3, LM2 LB2, ALL, 50)
-ZMK_COMBO(ffor, &kp F4, LM1 LB1, ALL, 50)
-ZMK_COMBO(ffiv, &kp F5, LM0 LB0, ALL, 50)
-ZMK_COMBO(fsix, &kp F6, RM0 RB0, ALL, 50)
-ZMK_COMBO(fsvn, &kp F7, RM1 RB1, ALL, 50)
-ZMK_COMBO(fegt, &kp F8, RM2 RB2, ALL, 50)
-ZMK_COMBO(fnin, &kp F9, RM3 RB3, ALL, 50)
-ZMK_COMBO(ten, &kp F10, RM4 RB4, ALL, 50)
+// ZMK_COMBO(one, &kp N1, LT4 LM4, ALL, 50)
+// ZMK_COMBO(two, &kp N2, LT3 LM3, ALL, 50)
+// ZMK_COMBO(tre, &kp N3, LT2 LM2, ALL, 50)
+// ZMK_COMBO(for, &kp N4, LT1 LM1, ALL, 50)
+// ZMK_COMBO(fiv, &kp N5, LT0 LM0, ALL, 50)
+// ZMK_COMBO(six, &kp N6, RT0 RM0, ALL, 50)
+// ZMK_COMBO(svn, &kp N7, RT1 RM1, ALL, 50)
+// ZMK_COMBO(egt, &kp N8, RT2 RM2, ALL, 50)
+// ZMK_COMBO(nin, &kp N9, RT3 RM3, ALL, 50)
+// ZMK_COMBO(zro, &kp N0, RT4 RM4, ALL, 50)
+// ZMK_COMBO(fone, &kp F1, LM4 LB4, ALL, 50)
+// ZMK_COMBO(ftwo, &kp F2, LM3 LB3, ALL, 50)
+// ZMK_COMBO(ftre, &kp F3, LM2 LB2, ALL, 50)
+// ZMK_COMBO(ffor, &kp F4, LM1 LB1, ALL, 50)
+// ZMK_COMBO(ffiv, &kp F5, LM0 LB0, ALL, 50)
+// ZMK_COMBO(fsix, &kp F6, RM0 RB0, ALL, 50)
+// ZMK_COMBO(fsvn, &kp F7, RM1 RB1, ALL, 50)
+// ZMK_COMBO(fegt, &kp F8, RM2 RB2, ALL, 50)
+// ZMK_COMBO(fnin, &kp F9, RM3 RB3, ALL, 50)
+// ZMK_COMBO(ten, &kp F10, RM4 RB4, ALL, 50)
 ZMK_COMBO(rstl, &sys_reset, LH0 LH1 LH2, ALL, 50)
 ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
 
@@ -208,9 +208,9 @@ ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
 // |    |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |    |
 //                   |     | LWR | SPC |   | ENT | RSE  |     |
                         bindings = <
-   ___  &kp Q              &kp W       &kp E       &kp R       &kp T         &kp Y  &kp U       &kp I       &kp O        &kp P            ___
-   ___  &mt LSHFT &mod_ae  &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G         &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &mt RSHIFT SEMI  ___
-   ___  &kp Z              &kp X       &kp C       &kp V       &kp B         &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH         ___
+   ___  &kp Q        &kp W       &kp E       &kp R       &kp T         &kp Y  &kp U       &kp I       &kp O        &kp P            ___
+   ___  &mt LSHFT A  &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G         &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &mt RSHIFT SEMI  ___
+   ___  &kp Z        &kp X       &kp C       &kp V       &kp B         &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH         ___
                                    &lt num ESC  &lt nav TAB  &kp SPACE    &mt HYP RET  &bs_del  &mo sym
                         >;
                 };
@@ -238,10 +238,10 @@ ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
 // |      |     |     |     |     |     |   |  \  |  1  |  2  |  3  |  =  |    |
 //                    |     |     |     |   |  .  |   ,  |  0  |
                         bindings = <
-   ___  ___  ___  ___  ___  ___      &kp STAR  &kp N7  &kp N8  &kp N9  &kp PLUS   ___
-   ___  ___  ___  ___  ___  ___      &kp FSLH  &kp N4  &kp N5  &kp N6  &kp MINUS  ___
-   ___  ___  ___  ___  ___  ___      &kp BSLH  &kp N1  &kp N2  &kp N3  &kp EQUAL  ___
-                   ___  ___  ___    &kp DOT  &kp COMMA  &kp N0
+   ___  &kp F1  &kp F2   &kp F3   &kp F4   ___      &kp STAR  &kp N7  &kp N8  &kp N9  &kp PLUS   ___
+   ___  &kp F5  &kp F6   &kp F7   &kp F8   ___      &kp FSLH  &kp N4  &kp N5  &kp N6  &kp MINUS  ___
+   ___  &kp F9  &kp F10  &kp F11  &kp F12  ___      &kp BSLH  &kp N1  &kp N2  &kp N3  &kp EQUAL  ___
+                           &kp mod_ae  ___  ___    &kp DOT  &kp COMMA  &kp N0
                         >;
                 };
 
