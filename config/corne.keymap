@@ -16,7 +16,7 @@
 #define OS_UNICODE_LEAD &macro_press &kp LALT  // <- macOS compose sequence (must be activated in system preferences)
 #define OS_UNICODE_TRAIL &macro_release &kp LALT  // <- Releasing Left-Alt terminates unicode input on macOns
 #include "../nodefree/helper.h"
-#include "../nodefree/keypos_def/keypos_42keys.h"
+#include "../nodefree/keypos_def/keypos_36keys.h"
 #include "../nodefree/international_chars/german.dtsi"
 
 #define ___ &trans
@@ -68,6 +68,7 @@ ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
 // ZMK_COMBO(ten, &kp F10, RM4 RB4, ALL, 50)
 ZMK_COMBO(rstl, &sys_reset, LH0 LH1 LH2, ALL, 50)
 ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
+ZMK_COMBO(rstr, &kp &caps_word, RM4 RM3, ALL, 50)
 
 / {
 
