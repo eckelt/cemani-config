@@ -68,7 +68,7 @@ ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
 // ZMK_COMBO(ten, &kp F10, RM4 RB4, ALL, 50)
 ZMK_COMBO(rstl, &sys_reset, LH0 LH1 LH2, ALL, 50)
 ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
-ZMK_COMBO(rstr, &caps_word, LM4 LM3, ALL, 50)
+ZMK_COMBO(rstr, &caps_word, LM4 LT4, ALL, 50)
 
 / {
 
