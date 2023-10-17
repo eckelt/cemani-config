@@ -244,7 +244,7 @@ ZMK_COMBO(rstr, &caps_word, LM4 LT4, ALL, 50)
    ___  &kp F9        &kp F10       &kp F11      &kp F12      ___      &kp BSLH  &kp N1  &kp N2  &kp N3  &kp EQUAL  ___
                                              &kp &mod_ae  ___  ___    &kp DOT  &kp COMMA  &kp N0
                         >;
-                };bbb
+                };
 
                 nav_layer {
                         label = "Nav";
