@@ -241,7 +241,7 @@ ZMK_COMBO(rstr, &caps_word, LM4 LT4, ALL, 50)
                         bindings = <
    ___  &kp F1        &kp F2        &kp F3       &kp F4       ___      &kp STAR  &kp N7  &kp N8  &kp N9  &kp PLUS   ___
    ___  &mt LSHFT F5  &mt LCTRL F6  &mt LALT F7  &mt LGUI F8  ___      &kp FSLH  &mt RGUI N4  &mt RALT N5  &mt RCTRL N6  &mt RSHFT MINUS  ___
-   ___  &kp F9        &kp F10       &kp F11      &kp F12      ___      &kp BSLH  &kp N1  &kp N2  &kp N3  &kp EQUAL  ___
+   ___  &kp F9        &kp F10       &kp F11      &kp F12      ___      &kp COLON  &kp N1  &kp N2  &kp N3  &kp EQUAL  ___
                                              &kp &mod_ae  ___  ___    &kp DOT  &kp COMMA  &kp N0
                         >;
                 };
