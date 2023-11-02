@@ -68,7 +68,8 @@ ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
 // ZMK_COMBO(ten, &kp F10, RM4 RB4, ALL, 50)
 ZMK_COMBO(rstl, &sys_reset, LH0 LH1 LH2, ALL, 50)
 ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
-ZMK_COMBO(rstr, &caps_word, LM4 LT4, ALL, 50)
+ZMK_COMBO(rstr, &caps_word, LM4 LB4, ALL, 50)
+ZMK_COMBO(rstr, &caps_word, LM4 RM4, ALL, 50)
 
 / {
 
@@ -227,17 +228,17 @@ ZMK_COMBO(rstr, &caps_word, LM4 LT4, ALL, 50)
    ___  &kp EXCL      &kp AT        &kp HASH    &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS  &kp LPAR  &kp RPAR  &kp GRAVE  ___
    ___  &kp C_BRI_UP  &kp K_VOL_UP  &kp C_PREV  &kp C_PP  &kp C_NEXT    &kp SQT    &kp DQT   &kp LBKT  &kp RBKT  &kp BSLH   ___
    ___  &kp C_BRI_DN  &kp K_VOL_DN  &kp K_MUTE  ___       ___           &kp UNDER  &kp STAR  &kp LBRC  &kp RBRC  &kp PIPE   ___
-                                                       &auml  &a_uml  &de_ae   &mod_ae  ___  ___
+                                                       ___  ___  ___   ___  ___  ___
                         >;
                 };
 
                 num_layer {
                         label = "NumPad";
 // -----------------------------------------------------------------------------------------
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |  *  |  7  |  8  |  9  |  +  |    |
-// |      |     |     |     |     |     |   |  /  |  4  |  5  |  6  |  -  |    |
-// |      |     |     |     |     |     |   |  \  |  1  |  2  |  3  |  =  |    |
-//                    |     |     |     |   |  .  |   ,  |  0  |
+// |    \ F1 | F2  | F3  | F4  |    |     |  *  |  7  |  8  |  9  |  +  |    |
+// |    | F5 | F6  | F7  | F8  |    |     |  /  |  4  |  5  |  6  |  -  |    |
+// |    | F9 | F10 | F11 | F12 |    |     |  :  |  1  |  2  |  3  |  =  |    |
+//                 |     |     |     |   |  .  |   ,  |  0  |
                         bindings = <
    ___  &kp F1        &kp F2        &kp F3       &kp F4       ___      &kp STAR  &kp N7  &kp N8  &kp N9  &kp PLUS   ___
    ___  &mt LSHFT F5  &mt LCTRL F6  &mt LALT F7  &mt LGUI F8  ___      &kp FSLH  &mt RGUI N4  &mt RALT N5  &mt RCTRL N6  &mt RSHFT MINUS  ___
