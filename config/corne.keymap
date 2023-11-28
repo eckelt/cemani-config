@@ -72,7 +72,6 @@ ZMK_COMBO(rstr, &caps_word, LM4 LB4, ALL, 50)
 ZMK_COMBO(rstr, &caps_word, LM4 RM4, ALL, 50)
 
 / {
-
     macros {
         auml: auml {
             label = "a umlaut";
