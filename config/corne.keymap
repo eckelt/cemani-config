@@ -263,4 +263,3 @@ ZMK_COMBO(rstr, &caps_word, LM4 RM4, ALL, 50)
 
         };
 };
-&mt LSHFT A  &mt LCTRL S &mt LALT D  &mt LGUI F 
