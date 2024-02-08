@@ -262,7 +262,7 @@ ZMK_COMBO(rstr, &caps_word, LM4 RM4, ALL, 50)
                         >;
                 };
 
-                default_layer {
+                steno_layer {
                         label = "Steno";
 // -----------ESC---------------------------------------------------------------------------
 // |    |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |    |
