@@ -265,8 +265,8 @@ ZMK_COMBO(rstr, &caps_word, LM4 RM4, ALL, 50)
                 steno_layer {
                         label = "Steno";
                         bindings = <
-   ___  &kp Q    &kp W    &kp E    &kp R    &kp T         &kp Y    &kp U    &kp I    &kp O    &kp P       ___
-   ___  &kp A    &kp S    &kp D    &kp F    &kp G         &kp H    &kp J    &kp K    &kp L    &kp SEMI    ___
+   ___  &kp Q    &kp W    &kp E    &kp R    &kp T         &kp U    &kp I    &kp O    &kp P     &kp LBKT   ___
+   ___  &kp A    &kp S    &kp D    &kp F    &kp G         &kp J    &kp K    &kp L    &kp SEMI  &kp SQT    ___
    ___  ___      ___      ___      ___      ___           ___      ___      ___      ___      ___         ___
                              ___   &kp C    &kp V         &kp N   &kp M   &to 0
                         >;
