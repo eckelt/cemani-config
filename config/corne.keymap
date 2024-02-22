@@ -69,8 +69,9 @@ ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
 // ZMK_COMBO(ften, &kp F10, RM4 RB4, ALL, 50)
 ZMK_COMBO(rstl, &sys_reset, LH0 LH1 LH2, ALL, 50)
 ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
-ZMK_COMBO(rstr, &caps_word, LM4 LB4, ALL, 50)
-ZMK_COMBO(rstr, &caps_word, LM4 RM4, ALL, 50)
+ZMK_COMBO(capsw, &caps_word, LM4 LB4, ALL, 50)
+// ZMK_COMBO(caps, &caps_word, LM4 RM4, ALL, 50)
+ZMK_COMBO(caps, &to stn, RB2 RB3 RB4, ALL, 50)
 
 / {
     macros {
@@ -228,7 +229,7 @@ ZMK_COMBO(rstr, &caps_word, LM4 RM4, ALL, 50)
    ___  &kp EXCL      &kp AT        &kp HASH    &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS  &kp LPAR  &kp RPAR  &kp GRAVE  ___
    ___  ___           ___           &kp GRAVE   &kp SQT   &kp DQT       &kp MINUS  &kp UNDER   &kp LBKT  &kp RBKT  &kp BSLH   ___
    ___  ___           ___           &kp FSLH    &kp PIPE  &kp BSLH      &kp TILDE  &kp STAR  &kp LBRC  &kp RBRC  &kp PIPE   ___
-                                                      ___  ___  ___     ___  &to stn  ___
+                                                      ___  ___  ___     ___  ___  ___
                         >;
                 };
 
