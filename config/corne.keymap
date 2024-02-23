@@ -184,13 +184,13 @@ ZMK_COMBO(mosym, &mo sym, RH0 RH1, ALL, 50)
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&mt &lt nav SPACE>, <&kp SPACE>;
+                bindings = <&lt nav SPACE>, <&kp SPACE>;
             };
             td_bs: tap_dance_backspace_sym {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&mt &lt sym &bs_del>, <&bs_del>;
+                bindings = <&lt sym &bs_del>, <&bs_del>;
             };
         };
 
