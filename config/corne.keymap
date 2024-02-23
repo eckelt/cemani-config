@@ -180,13 +180,13 @@ ZMK_COMBO(mosym, &mo sym, RH0 RH1, ALL, 50)
                 bindings = <&kp E>, <&de_eur>;
                 mods = <(MOD_LALT|MOD_RALT)>;
             };
-            td_spc: tap_dance_mod_tap {
+            td_spc: tap_dance_space_nav {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
                 bindings = <&mt SPACE nav>, <&kp SPACE>;
             };
-            td_bs: tap_dance_mod_tap {
+            td_bs: tap_dance_backspace_sym {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
