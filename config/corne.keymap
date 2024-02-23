@@ -45,15 +45,15 @@ ZMK_BEHAVIOR(sft_a_ae, mod_morph,
 )
 
 ZMK_COMBO(esc, &kp ESC, LT4 LT3, ALL, 25)
-ZMK_COMBO(esc1, &kp ESC, LH0 LH1, ALL, 25)
+ZMK_COMBO(esc1, &kp ESC, LH1 LH0, ALL, 25)
 ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50)
 ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
 ZMK_COMBO(rstl, &sys_reset, LH0 LH1 LH2, ALL, 50)
 ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
 ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 ZMK_COMBO(stno, &to stn, RB2 RB3 RB4, ALL, 50)
-ZMK_COMBO(mosym, &mo sym, LH0 LH1, ALL, 50)
-ZMK_COMBO(monav, &mo nav, RH0 RH1, ALL, 50)
+ZMK_COMBO(mosym, &mo sym, LH1 LH2, ALL, 50)
+ZMK_COMBO(monav, &mo nav, RH1 RH2, ALL, 50)
 
 / {
     macros {
@@ -183,13 +183,13 @@ ZMK_COMBO(monav, &mo nav, RH0 RH1, ALL, 50)
             td_spc: tap_dance_space_nav {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
-                tapping-term-ms = <60>;
+                tapping-term-ms = <80>;
                 bindings = <&lt nav SPACE>, <&kp SPACE>;
             };
             td_bs: tap_dance_backspace_sym {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
-                tapping-term-ms = <60>;
+                tapping-term-ms = <80>;
                 bindings = <&lt sym BSPC>, <&bs_del>;
             };
         };
