@@ -184,13 +184,13 @@ ZMK_COMBO(mosym, &mo sym, RH0 RH1, ALL, 50)
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&mt SPACE nav>, <&kp SPACE>;
+                bindings = <&mt &mo nav SPACE>, <&kp SPACE>;
             };
             td_bs: tap_dance_backspace_sym {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&mt &bs_del sym>, <&bs_del>;
+                bindings = <&mt &mo sym &bs_del>, <&bs_del>;
             };
         };
 
@@ -210,7 +210,7 @@ ZMK_COMBO(mosym, &mo sym, RH0 RH1, ALL, 50)
    ___  &kp Z    &kp X       &kp C       &kp V       &kp B         &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH   ___
                              &kp TAB  &kp LSHIFT &td_spc       &mt HYP RET &kp RSHIFT &td_bs  
                         >;
-                };
+                };                       
 
                 raise_layer {
                         label = "Sym";
