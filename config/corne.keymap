@@ -183,13 +183,13 @@ ZMK_COMBO(monav, &mo nav, RH1 RH2, ALL, 50)
             td_spc: tap_dance_space_nav {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
-                tapping-term-ms = <100>;
+                tapping-term-ms = <130>;
                 bindings = <&lt nav SPACE>, <&kp SPACE>;
             };
             td_bs: tap_dance_backspace_sym {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
-                tapping-term-ms = <120>;
+                tapping-term-ms = <150>;
                 bindings = <&lt sym BSPC>, <&bs_del>;
             };
         };
