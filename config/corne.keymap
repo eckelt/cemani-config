@@ -189,7 +189,7 @@ ZMK_COMBO(monav, &mo nav, RH1 RH2, ALL, 50)
             td_bs: tap_dance_backspace_sym {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
-                tapping-term-ms = <150>;
+                tapping-term-ms = <250>;
                 bindings = <&lt sym BSPC>, <&bs_del>;
             };
         };
