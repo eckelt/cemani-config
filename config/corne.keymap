@@ -190,7 +190,7 @@ ZMK_COMBO(monav, &mo nav, RH1 RH2, ALL, 50)
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;   
                 tapping-term-ms = <120>;
-                bindings = <&lt sym bs_del>, <&bs_del>;
+                bindings = <&lt sym &bs_del>, <&bs_del>;
             };
             td_sft_esc: tap_dance_shift_esc {
                 compatible = "zmk,behavior-tap-dance";
