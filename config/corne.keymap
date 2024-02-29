@@ -29,7 +29,11 @@
 
 
 &mt {
-    tapping-term-ms = <220>;
+    tapping-term-ms = <180>;
+    flavor = "balanced";
+};
+&lt {
+    tapping-term-ms = <120>;
     flavor = "balanced";
 };
 
@@ -183,7 +187,7 @@ ZMK_COMBO(monav, &mo nav, RH1 RH2, ALL, 50)
             td_spc: tap_dance_space_nav {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
-                tapping-term-ms = <80>;
+                tapping-term-ms = <150>;
                 bindings = <&lt nav SPACE>, <&kp P>;
             };
             td_bs: tap_dance_backspace_sym {
