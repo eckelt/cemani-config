@@ -39,7 +39,7 @@
 
 // tap: backspace | shift + tap: delete
 ZMK_BEHAVIOR(bs_del, mod_morph,
-    bindings = <&td_bs>, <&td_del>;
+    bindings = <&td_bs>, <&kp DEL>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
@@ -195,12 +195,6 @@ ZMK_COMBO(monav, &mo nav, RH1 RH2, ALL, 50)
                 #binding-cells = <0>;   
                 tapping-term-ms = <200>;
                 bindings = <&lt sym BSPC>, <&kp BSPC>;
-            };
-            td_del: tap_dance_delete_sym {
-                compatible = "zmk,behavior-tap-dance";
-                #binding-cells = <0>;   
-                tapping-term-ms = <200>;
-                bindings = <&lt sym DEL>, <&kp DEL>;
             };
             td_sft_esc: tap_dance_shift_esc {
                 compatible = "zmk,behavior-tap-dance";
