@@ -33,8 +33,12 @@
     flavor = "balanced";
 };
 &lt {
-    tapping-term-ms = <120>;
+    tapping-term-ms = < 200>;
     flavor = "balanced";
+};
+&sk {
+    release-after-ms = <400>;
+    quick-release;
 };
 
 // tap: backspace | shift + tap: delete
