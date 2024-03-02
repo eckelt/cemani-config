@@ -36,10 +36,6 @@
     tapping-term-ms = <120>;
     flavor = "balanced";
 };
-&td {
-    tapping-term-ms = <200>;
-    flavor = "balanced";
-};
 
 // tap: backspace | shift + tap: delete
 ZMK_BEHAVIOR(bs_del, mod_morph,
@@ -58,8 +54,8 @@ ZMK_COMBO(sym, &mo sym, LH1 LH0, ALL, 25)
 ZMK_COMBO(sym, &mo sym, RH1 RH0, ALL, 25)
 ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50)
 ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
-ZMK_COMBO(rstl, &sys_reset, LH0 LH1 LH2, ALL, 50)
-ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
+// ZMK_COMBO(rstl, &sys_reset, LH0 LH1 LH2, ALL, 50)
+// ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
 ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 ZMK_COMBO(stno, &to stn, RB2 RB3 RB4, ALL, 50)
 ZMK_COMBO(mosym, &mo sym, LH1 LH2, ALL, 50)
@@ -224,7 +220,7 @@ ZMK_COMBO(monav, &mo nav, RH1 RH2, ALL, 50)
    ___  &kp Q    &kp W       &kp E       &kp R       &kp T         &kp Y  &kp U       &kp I       &kp O        &kp P      ___
    ___  &kp A    &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G         &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &kp SEMI   ___
    ___  &kp Z    &kp X       &kp C       &kp V       &kp B         &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH   ___
-                      &sl LSHFT  &lt num TAB  &lt nav SPACE       &mt HYP RET  &bs_del  &sl RSHFT  
+                      &sl LSHFT  &lt num TAB  &lt nav SPACE       &mt HYP RET  &lt sym BSPC  &sl RSHFT  
                         >;
                 };                       
 
