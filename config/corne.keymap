@@ -190,24 +190,7 @@ ZMK_COMBO(monav, &mo nav, RH1 RH2, ALL, 50)
                 bindings = <&kp E>, <&de_eur>;
                 mods = <(MOD_LALT|MOD_RALT)>;
             };
-            td_spc: tap_dance_space_nav {
-                compatible = "zmk,behavior-tap-dance";
-                #binding-cells = <0>;                      
-                tapping-term-ms = <220>;
-                bindings = <&lt nav SPACE>, <&kp SPACE>;
-            };
-            td_bs: tap_dance_backspace_sym {
-                compatible = "zmk,behavior-tap-dance";
-                #binding-cells = <0>;   
-                tapping-term-ms = <200>;
-                bindings = <&lt sym BSPC>, <&kp BSPC>;
-            };
-            td_sft_esc: tap_dance_shift_esc {
-                compatible = "zmk,behavior-tap-dance";
-                #binding-cells = <0>;
-                tapping-term-ms = <220>;
-                bindings = <&kp LSHIFT>, <&kp ESC>;
-            };
+            
         };
 
         keymap {
