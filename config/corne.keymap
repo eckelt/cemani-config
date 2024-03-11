@@ -190,7 +190,13 @@ ZMK_COMBO(monav, &mo nav, RH1 RH2, ALL, 50)
                 bindings = <&kp E>, <&de_eur>;
                 mods = <(MOD_LALT|MOD_RALT)>;
             };
-            
+            lt_bspc: layer_tap_bspc_del {
+                compatible = "zmk,behavior-hold-tap";
+                label = "LAYER_TAP_BACKSPACE_DELETE";
+                #binding-cells = <2>;
+                bindings = <&mo>, <&bs_del>;
+                tapping-term-ms = <200>;
+            };
         };
 
         keymap {
@@ -207,7 +213,7 @@ ZMK_COMBO(monav, &mo nav, RH1 RH2, ALL, 50)
    ___  &kp Q    &kp W       &kp E       &kp R       &kp T         &kp Y  &kp U       &kp I       &kp O        &kp P      ___
    ___  &kp A    &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G         &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &kp SEMI   ___
    ___  &kp Z    &kp X       &kp C       &kp V       &kp B         &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH   ___
-                      &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt HYP RET  &lt sym BSPC  &sk RSHFT  
+                      &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt HYP RET  &lt_bspc sym 0  &sk RSHFT  
                         >;
                 };                       
 
