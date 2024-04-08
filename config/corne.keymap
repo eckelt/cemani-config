@@ -63,7 +63,7 @@ ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
 // ZMK_COMBO(rstl, &sys_reset, LH0 LH1 LH2, ALL, 50)
 // ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
 ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
-ZMK_COMBO(stno, &to stn, RB2 RB3 RB4, ALL, 50)
+ZMK_COMBO(stno, &tog stn, RB2 RB3 RB4, ALL, 50)
 ZMK_COMBO(mosym, &mo sym, LH1 LH2, ALL, 50)
 ZMK_COMBO(monav, &mo nav, RH1 RH2, ALL, 50)
 
@@ -269,7 +269,7 @@ ZMK_COMBO(monav, &mo nav, RH1 RH2, ALL, 50)
                         bindings = <
    ___  &kp Q    &kp W    &kp E    &kp R    &kp T         &kp U    &kp I    &kp O    &kp P     &kp LBKT   ___
    ___  &kp A    &kp S    &kp D    &kp F    &kp G         &kp J    &kp K    &kp L    &kp SEMI  &kp SQT    ___
-   ___  ___      ___      ___      ___      &to 0         ___      ___      ___      ___      ___         ___
+   ___  ___      ___      ___      ___      ___         ___      ___      ___      ___      ___         ___
                              &kp MINUS   &kp C    &kp V         &kp N   &kp M   &kp EQUAL
                         >;
                 };
