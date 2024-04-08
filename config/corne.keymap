@@ -20,8 +20,10 @@
 #include "../nodefree/international_chars/german.dtsi"
 
 #define ___ &trans
+#define MEH LS(LC(LALT))
 #define HYP LS(LC(LA(LGUI)))
 
+#define def 0
 #define sym 1
 #define num 2
 #define nav 3
@@ -54,8 +56,8 @@ ZMK_BEHAVIOR(sft_a_ae, mod_morph,
 
 ZMK_COMBO(esc, &kp ESC, LT4 LT3, ALL, 25)
 ZMK_COMBO(esc1, &kp ESC, LH2 LH1, ALL, 25)
-ZMK_COMBO(sym, &mo sym, LH1 LH0, ALL, 25)
-ZMK_COMBO(sym, &mo sym, RH1 RH0, ALL, 25)
+ZMK_COMBO(num, &to num, LH1 LH0, ALL, 25)
+ZMK_COMBO(num, &kp MEH, RH1 RH0, ALL, 25)
 ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50)
 ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
 // ZMK_COMBO(rstl, &sys_reset, LH0 LH1 LH2, ALL, 50)
