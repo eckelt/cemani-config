@@ -57,7 +57,7 @@ ZMK_BEHAVIOR(sft_a_ae, mod_morph,
 ZMK_COMBO(esc, &kp ESC, LT4 LT3, ALL, 25)
 ZMK_COMBO(esc1, &kp ESC, LH2 LH1, ALL, 25)
 ZMK_COMBO(num, &to num, LH1 LH0, ALL, 25)
-ZMK_COMBO(num, &kp MEH, RH1 RH0, ALL, 25)
+ZMK_COMBO(num, &kp HYP, RH1 RH0, ALL, 25)
 ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50)
 ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
 // ZMK_COMBO(rstl, &sys_reset, LH0 LH1 LH2, ALL, 50)
@@ -215,7 +215,7 @@ ZMK_COMBO(monav, &mo nav, RH1 RH2, ALL, 50)
    ___  &kp Q    &kp W       &kp E       &kp R       &kp T         &kp Y  &kp U       &kp I       &kp O        &kp P      ___
    ___  &kp A    &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G         &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &kp SEMI   ___
    ___  &kp Z    &kp X       &kp C       &kp V       &kp B         &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH   ___
-                      &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt HYP RET  &lt_bspc sym 0  &sk RSHFT  
+                      &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT  
                         >;
                 };                       
 
