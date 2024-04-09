@@ -57,7 +57,7 @@ ZMK_BEHAVIOR(sft_a_ae, mod_morph,
 ZMK_COMBO(esc, &kp ESC, LT4 LT3, ALL, 30)
 ZMK_COMBO(esc1, &kp ESC, LH2 LH1, ALL, 40)
 ZMK_COMBO(num, &tog num, LH0 LH1, ALL, 60)
-ZMK_COMBO(hyp, &kp HYP, RH0 RH1, ALL, 60)
+ZMK_COMBO(hyp, &kp HYP, RH0 RH1, ALL, 120)
 ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50)
 ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
 // ZMK_COMBO(rstl, &sys_reset, LH0 LH1 LH2, ALL, 50)
