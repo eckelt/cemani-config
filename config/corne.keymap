@@ -67,11 +67,12 @@ ZMK_COMBO(stno, &tog stn, RB2 RB3 RB4, ALL, 50)
 ZMK_COMBO(mosym, &mo sym, LH1 LH2, ALL, 50)
 ZMK_COMBO(monav, &mo nav, RH1 RH2, ALL, 50)
 ZMK_COMBO(eursym, &kp &de_eur, LT2 LM2, ALL, 50)
+ZMK_COMBO(eursym, &kp &de_eur2, LT3 LM3, ALL, 50)
 
 / {
     macros {
-        de_eur: de_eur {
-            label = "de_eur";
+        de_eur2: de_eur2 {
+            label = "de_eur2";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp RALT>
