@@ -66,9 +66,29 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 ZMK_COMBO(stno, &tog stn, RB2 RB3 RB4, ALL, 50)
 ZMK_COMBO(mosym, &mo sym, LH1 LH2, ALL, 50)
 ZMK_COMBO(monav, &mo nav, RH1 RH2, ALL, 50)
+ZMK_COMBO(eursym, &kp de_eur, LT2 LM2, ALL, 50)
 
 / {
     macros {
+        de_eur: de_eur {
+            label = "de_eur";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp RALT>
+            , <&macro_press &kp RSHFT>
+            , <&macro_press &kp 2>
+            , <&macro_release &kp 2>
+            , <&macro_release &kp RSHFT>
+            , <&macro_release &kp RALT>;
+        };
+        dictation: dictation {
+            label = "dictation";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp GLOBE>
+                , <&macro_tap &kp GLOBE>;
+        };
         auml: auml {
             label = "a umlaut";
             compatible = "zmk,behavior-macro";
@@ -229,7 +249,7 @@ ZMK_COMBO(monav, &mo nav, RH1 RH2, ALL, 50)
                         bindings = <
    ___  &kp EXCL      &kp AT        &kp HASH    &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS  &kp LPAR  &kp RPAR  &kp GRAVE  ___
    ___  ___           &kp TILDE     &kp GRAVE   &kp SQT   &kp DQT       &kp MINUS  &kp UNDER   &kp LBKT  &kp RBKT  &kp BSLH   ___
-   ___  ___           ___           &kp FSLH    &kp PIPE  &kp BSLH      &kp PLUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp STAR   ___
+   ___  &kp dictation ___           &kp FSLH    &kp PIPE  &kp BSLH      &kp PLUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp STAR   ___
                                                       ___  ___  ___     ___  ___  ___
                         >;
                 };
