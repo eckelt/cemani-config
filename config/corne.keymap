@@ -66,7 +66,7 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 ZMK_COMBO(stno, &tog stn, RB2 RB3 RB4, ALL, 50)
 ZMK_COMBO(mosym, &mo sym, LH1 LH2, ALL, 50)
 ZMK_COMBO(monav, &mo nav, RH1 RH2, ALL, 50)
-ZMK_COMBO(eursym, &kp de_eur, LT2 LM2, ALL, 50)
+ZMK_COMBO(eursym, &kp &de_eur, LT2 LM2, ALL, 50)
 
 / {
     macros {
