@@ -84,7 +84,7 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
             #binding-cells = <0>;
             // tap-ms = <10>;
             bindings
-                , <&macro_tap &kp RA(U)>
+                = <&macro_tap &kp RA(U)>
                 , <&macro_tap &kp A>
                 ;
         };
@@ -94,7 +94,7 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
             #binding-cells = <0>;
             // tap-ms = <10>;
             bindings
-                , <&macro_tap &kp RA(U)>
+                = <&macro_tap &kp RA(U)>
                 , <&macro_tap &kp LS(A)>
                 ;
         };
