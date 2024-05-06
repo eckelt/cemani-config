@@ -60,47 +60,14 @@ ZMK_COMBO(num, &tog num, LH0 LH1, ALL, 60)
 ZMK_COMBO(hyp, &kp HYP, RH0 RH1, ALL, 120)
 ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50)
 ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
-// ZMK_COMBO(rstl, &sys_reset, LH0 LH1 LH2, ALL, 50)
-// ZMK_COMBO(rstr, &sys_reset, RH0 RH1 RH2, ALL, 50)
 ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 ZMK_COMBO(stno, &tog stn, RB2 RB3 RB4, ALL, 50)
 ZMK_COMBO(mosym, &mo sym, LH1 LH2, ALL, 50)
 ZMK_COMBO(monav, &mo nav, RH1 RH2, ALL, 50)
-ZMK_COMBO(eursym, &kp &de_eur, LT2 LM2, ALL, 50)
-ZMK_COMBO(eursym, &kp &de_eur2, LT3 LM3, ALL, 50)
+ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
 
 / {
     macros {
-        de_eur2: de_eur2 {
-            label = "de_eur2";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp RALT>
-            , <&macro_press &kp RSHFT>
-            , <&macro_press &kp 2>
-            , <&macro_release &kp 2>
-            , <&macro_release &kp RSHFT>
-            , <&macro_release &kp RALT>;
-        };
-        dictation: dictation {
-            label = "dictation";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp GLOBE>
-                , <&macro_tap &kp GLOBE>;
-        };
-        auml: auml {
-            label = "a umlaut";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp RALT>
-                , <&macro_tap &kp U>
-                , <&macro_release &kp RALT>
-                , <&macro_tap &kp A>
-                ;
-        };
         undo: undo {
             label = "undo";
             compatible = "zmk,behavior-macro";
@@ -111,55 +78,13 @@ ZMK_COMBO(eursym, &kp &de_eur2, LT3 LM3, ALL, 50)
                 , <&macro_release &kp RGUI>
                 ;
         };
-        cut: cut {
-            label = "cut";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp RGUI>
-                , <&macro_tap &kp X>
-                , <&macro_release &kp RGUI>
-                ;
-        };
-        copy: copy {
-            label = "copy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp RGUI>
-                , <&macro_tap &kp C>
-                , <&macro_release &kp RGUI>
-                ;
-        };
-        paste: paste {
-            label = "paste";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp RGUI>
-                , <&macro_tap &kp V>
-                , <&macro_release &kp RGUI>
-                ;
-        };
-        redo: redo {
-            label = "redo";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp RGUI>
-                , <&macro_tap &kp Y>
-                , <&macro_release &kp RGUI>
-                ;
-        };
         ae_lc: ae_lc {
             label = "ae_lc";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             // tap-ms = <10>;
             bindings
-                = <&macro_press &kp RALT>
-                , <&macro_tap &kp U>
-                , <&macro_release &kp RALT>
+                , <&macro_tap &kp RA(U)>
                 , <&macro_tap &kp A>
                 ;
         };
@@ -169,9 +94,7 @@ ZMK_COMBO(eursym, &kp &de_eur2, LT3 LM3, ALL, 50)
             #binding-cells = <0>;
             // tap-ms = <10>;
             bindings
-                = <&macro_press &kp RALT>
-                , <&macro_tap &kp U>
-                , <&macro_release &kp RALT>
+                , <&macro_tap &kp RA(U)>
                 , <&macro_tap &kp LS(A)>
                 ;
         };
@@ -185,32 +108,11 @@ ZMK_COMBO(eursym, &kp &de_eur2, LT3 LM3, ALL, 50)
                 bindings = <&ae_lc>, <&ae_uc>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
-            a_uml: a_uml {
-                compatible = "zmk,behavior-mod-morph";
-                label = "A umlaut";
-                #binding-cells = <0>;
-                bindings = <&kp A>, <&mod_ae>;
-                mods = <(MOD_LALT|MOD_RALT)>;
-            };
             o_uml: o_uml {
                 compatible = "zmk,behavior-mod-morph";
                 label = "O umlaut";
                 #binding-cells = <0>;
                 bindings = <&kp O>, <&de_oe>;
-                mods = <(MOD_LALT|MOD_RALT)>;
-            };
-            u_uml: u_uml {
-                compatible = "zmk,behavior-mod-morph";
-                label = "U umlaut";
-                #binding-cells = <0>;
-                bindings = <&kp U>, <&de_ue>;
-                mods = <(MOD_LALT|MOD_RALT)>;
-            };
-            eur: eur {
-                compatible = "zmk,behavior-mod-morph";
-                label = "e eur";
-                #binding-cells = <0>;
-                bindings = <&kp E>, <&de_eur>;
                 mods = <(MOD_LALT|MOD_RALT)>;
             };
             lt_bspc: layer_tap_bspc_del {
@@ -248,9 +150,9 @@ ZMK_COMBO(eursym, &kp &de_eur2, LT3 LM3, ALL, 50)
 // |    | Br- |Vol- |Mute |     |     |   |  _  |  *  |  {  |  }  | "|" |    |
 //                    |     |     | SPC |   | ENT |     |     |
                         bindings = <
-   ___  &kp EXCL       &kp AT        &kp HASH    &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS  &kp LPAR  &kp RPAR  &kp GRAVE  ___
-   ___  ___            &kp TILDE     &kp GRAVE   &kp SQT   &kp DQT       &kp MINUS  &kp UNDER   &kp LBKT  &kp RBKT  &kp BSLH   ___
-   ___  &kp &dictation ___           &kp FSLH    &kp PIPE  &kp BSLH      &kp PLUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp STAR   ___
+   ___  &kp EXCL   &kp AT        &kp HASH    &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS  &kp LPAR  &kp RPAR  &kp GRAVE  ___
+   ___  ___        &kp TILDE     &kp GRAVE   &kp SQT   &kp DQT       &kp MINUS  &kp UNDER   &kp LBKT  &kp RBKT  &kp BSLH   ___
+   ___  &kp GLOBE  ___           &kp FSLH    &kp PIPE  &kp BSLH      &kp PLUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp STAR   ___
                                                       ___  ___  ___     ___  ___  ___
                         >;
                 };
@@ -263,10 +165,10 @@ ZMK_COMBO(eursym, &kp &de_eur2, LT3 LM3, ALL, 50)
 // |    | F9 | F10 | F11 | F12 |    |     |  :  |  1  |  2  |  3  |  =  |    |
 //                 |     |     |     |   |  .  |   ,  |  0  |
                         bindings = <
-   ___  &kp F1        &kp F2        &kp F3       &kp F4       ___      &kp STAR   &kp N7       &kp N8       &kp N9        &kp PLUS         ___
-   ___  &mt LSHFT F5  &mt LCTRL F6  &mt LALT F7  &mt LGUI F8  ___      &kp FSLH   &mt RGUI N4  &mt RALT N5  &mt RCTRL N6  &mt RSHFT MINUS  ___
-   ___  &kp F9        &kp F10       &kp F11      &kp F12      ___      &kp COLON  &kp N1       &kp N2       &kp N3        &kp EQUAL        ___
-                                            &kp &mod_ae  ___  ___      &kp COMMA  &kp DOT  &kp N0
+   ___  &kp F1        &kp F2        &kp F3       &kp F4       &kp &ae_lc      &kp STAR   &kp N7       &kp N8       &kp N9        &kp PLUS         ___
+   ___  &mt LSHFT F5  &mt LCTRL F6  &mt LALT F7  &mt LGUI F8  &kp &mod_ae     &kp FSLH   &mt RGUI N4  &mt RALT N5  &mt RCTRL N6  &mt RSHFT MINUS  ___
+   ___  &kp F9        &kp F10       &kp F11      &kp F12      &kp RA(RS(2))   &kp COLON  &kp N1       &kp N2       &kp N3        &kp EQUAL        ___
+                                            &kp &mod_ae  ___  ___             &kp COMMA  &kp DOT  &kp N0
                         >;
                 };
 
