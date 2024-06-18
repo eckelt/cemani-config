@@ -57,14 +57,18 @@ ZMK_BEHAVIOR(sft_a_ae, mod_morph,
 ZMK_COMBO(esc, &kp ESC, LT4 LT3, ALL, 30)
 ZMK_COMBO(esc1, &kp ESC, LH2 LH1, ALL, 40)
 ZMK_COMBO(hyp, &kp HYP, RH0 RH1, ALL, 120)
-ZMK_COMBO(mosym, &mo sym, RH1 RH2, ALL, 120)
+
 ZMK_COMBO(tognav, &tog nav, RM0 RM1 RM2, ALL, 50)
 ZMK_COMBO(tognum, &tog num, LH0 LH1, ALL, 60)
 ZMK_COMBO(togstno, &tog stn, RB2 RB3 RB4, ALL, 50)
+
 ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50)
 ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
+
 ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
+
 ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
+
 
 / {
     macros {
@@ -152,7 +156,7 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
                         bindings = <
    ___  &kp EXCL   &kp AT        &kp HASH    &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS  &kp LPAR  &kp RPAR  &kp GRAVE  ___
    ___  ___        &kp TILDE     &kp GRAVE   &kp SQT   &kp DQT       &kp MINUS  &kp UNDER   &kp LBKT  &kp RBKT  &kp BSLH   ___
-   ___  &kp GLOBE  ___           &kp FSLH    &kp PIPE  &kp BSLH      &kp PLUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp STAR   ___
+   ___  &kp GLOBE  &kp de_eur    &kp FSLH    &kp PIPE  &kp BSLH      &kp PLUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp STAR   ___
                                                       ___  ___  ___     ___  ___  ___
                         >;
                 };
@@ -175,10 +179,10 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
                 nav_layer {
                         label = "Nav";
 // -----------------------------------------------------------------------------------------
-// |      | BT1 | BT2 | BT3 | BT4 | BT5 |   |home |pg dn|pg up| end |     |     |
-// |      |     |     |     |     |BTCLR|   |  <  |  v  |  ^  |  >  |     |     |
-// |      |undo | cut |copy |oaste|redo |   |     |     |     |     |     |     |
-//                    |     |     |     |   |     |     |     |
+// |      | BT1 | BT2 | BT3 | BT4 |  BTCLR |   |home |pg dn|pg up| end |     |     |
+// |      |  🔆 |  🔊 | ⏮️  | ⏯️  |   ⏭️   |   |  <  |  v  |  ^  |  >  |     |     |
+// |      | 🔅  | 🔊  | 🔇  |     | togout |   |     |     |     |     |     |     |
+//                       |     |     |     |   |     |     |     |
                         bindings = <
    ___  &bt BT_SEL 0        &bt BT_SEL 1        &bt BT_SEL 2      &bt BT_SEL 3    &bt BT_CLR        &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    ___  ___
    ___  &mt LSHFT C_BRI_UP  &mt LCTRL C_VOL_UP  &mt LALT C_PREV   &mt LGUI C_PP   &kp C_NEXT        &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  ___  ___
