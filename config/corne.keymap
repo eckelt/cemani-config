@@ -69,8 +69,6 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 
 ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
 
-ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
-
 / {
     macros {
         undo: undo {
@@ -101,6 +99,14 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
             bindings
                 = <&macro_tap &kp RA(U)>
                 , <&macro_tap &kp LS(A)>
+                ;
+        };
+        euro_sign: euro_sign {
+            label = "euro_sign";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LA(LS(2))>
                 ;
         };
     };
