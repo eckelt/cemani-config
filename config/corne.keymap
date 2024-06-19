@@ -69,6 +69,7 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 
 ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
 
+ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
 / {
     macros {
@@ -156,7 +157,7 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
                         bindings = <
    ___  &kp EXCL   &kp AT        &kp HASH    &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS  &kp LPAR  &kp RPAR  &kp GRAVE  ___
    ___  ___        &kp TILDE     &kp GRAVE   &kp SQT   &kp DQT       &kp MINUS  &kp UNDER   &kp LBKT  &kp RBKT  &kp BSLH   ___
-   ___  &kp GLOBE  &kp &de_eur    &kp FSLH    &kp PIPE  &kp BSLH      &kp PLUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp STAR   ___
+   ___  &kp GLOBE  &kp &euro_sign    &kp FSLH    &kp PIPE  &kp BSLH      &kp PLUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp STAR   ___
                                                       ___  ___  ___     ___  ___  ___
                         >;
                 };
