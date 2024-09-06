@@ -49,8 +49,8 @@ ZMK_BEHAVIOR(bs_del, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
-ZMK_BEHAVIOR(sft_a_ae, mod_morph,
-    bindings = <&mt LSHIFT A>, <&de_ae>;
+ZMK_BEHAVIOR(dot_comma, mod_morph,
+    bindings = <&kp DOT>, <&kp COMMA>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
@@ -191,8 +191,8 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
                         bindings = <
    ___  &kp F1        &kp F2        &kp F3       &kp F4       &kp &ae_lc      &kp STAR   &kp N7       &kp N8       &kp N9        &kp PLUS         ___
    ___  &mt LSHFT F5  &mt LCTRL F6  &mt LALT F7  &mt LGUI F8  &kp &mod_ae     &kp FSLH   &mt RGUI N4  &mt RALT N5  &mt RCTRL N6  &mt RSHFT MINUS  ___
-   ___  &kp F9        &kp F10       &kp F11      &kp F12      &kp RA(RS(2))   &kp COLON  &kp N1       &kp N2       &kp N3        &kp EQUAL        ___
-                                            &kp &mod_ae  ___  ___             &kp COMMA  &kp DOT  &kp N0
+   ___  &kp F9        &kp F10       &kp F11      &kp F12      &kp RA(RS(2))   &kp COLON  &kp N1       &kp N2       &kp N3        &kp BSPC         ___
+                                            ___  ___  ___             &dot_comma  &bs_del  &mt RSHFT N0
                         >;
                 };
 
