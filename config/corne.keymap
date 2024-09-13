@@ -186,13 +186,13 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
 // -----------------------------------------------------------------------------------------
 // |    \ F1 | F2  | F3  | F4  |    |     |  *  |  7  |  8  |  9  |  +  |    |
 // |    | F5 | F6  | F7  | F8  |    |     |  /  |  4  |  5  |  6  |  -  |    |
-// |    | F9 | F10 | F11 | F12 |    |     |  :  |  1  |  2  |  3  |  =  |    |
-//                 |     |     |     |   |  .  |   ,  |  0  |
+// |    | F9 | F10 | F11 | F12 |    |     |  :  |  1  |  2  |  3  | . , |    |
+//                 |     |     |     |   | ENT | BCKS |  0  |
                         bindings = <
-   ___  &kp F1        &kp F2        &kp F3       &kp F4       &kp &ae_lc      &kp STAR   &kp N7       &kp N8       &kp N9        &kp PLUS         ___
-   ___  &mt LSHFT F5  &mt LCTRL F6  &mt LALT F7  &mt LGUI F8  &kp &mod_ae     &kp FSLH   &mt RGUI N4  &mt RALT N5  &mt RCTRL N6  &mt RSHFT MINUS  ___
-   ___  &kp F9        &kp F10       &kp F11      &kp F12      &kp RA(RS(2))   &kp COLON  &kp N1       &kp N2       &kp N3        &kp BSPC         ___
-                                            ___  ___  ___             &dot_comma  &bs_del  &mt RSHFT N0
+   ___  &kp F1        &kp F2        &kp F3       &kp F4       &kp &ae_lc        &kp STAR   &kp N7       &kp N8       &kp N9        &kp PLUS         ___
+   ___  &mt LSHFT F5  &mt LCTRL F6  &mt LALT F7  &mt LGUI F8  &kp &mod_ae       &kp FSLH   &mt RGUI N4  &mt RALT N5  &mt RCTRL N6  &mt RSHFT MINUS  ___
+   ___  &kp F9        &kp F10       &kp F11      &kp F12      &kp EQUAL         &kp COLON  &kp N1       &kp N2       &kp N3        &dot_comma       ___
+                                                       ___  ___  ___              &kp RET   &bs_del   &mt RSHFT N0
                         >;
                 };
 
