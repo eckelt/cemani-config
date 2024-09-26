@@ -146,12 +146,6 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
                 bindings = <&mo>, <&bs_del>;
                 tapping-term-ms = <200>;
             };
-            tdj: tap_dance_j {
-                compatible = "zmk,behavior-tap-dance";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>;
-                bindings = <&mt RGUI J>, <&kp J>;
-            };
         };
 
         keymap {
@@ -166,7 +160,7 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
 //                   |     | SFT | SPC |   | ENT | SFT |     |
                         bindings = <
    ___  &kp Q    &kp W       &kp E       &kp R       &kp T         &kp Y  &kp U       &kp I       &kp O        &kp P      ___
-   ___  &kp A    &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G         &kp H  &tdj        &mt RALT K  &mt RCTRL L  &kp SEMI   ___
+   ___  &kp A    &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G         &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &kp SEMI   ___
    ___  &kp Z    &kp X       &kp C       &kp V       &kp B         &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH   ___
                       &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
                         >;
@@ -183,7 +177,7 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
    ___  &kp EXCL   &kp AT        &kp HASH    &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS  &kp LPAR  &kp RPAR  &kp GRAVE  ___
    ___  ___        &kp TILDE     &kp GRAVE   &kp SQT   &kp DQT       &kp MINUS  &kp UNDER   &kp LBKT  &kp RBKT  &kp BSLH   ___
    ___  &kp GLOBE  &kp &euro_sign    &kp FSLH    &kp PIPE  &kp BSLH      &kp PLUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp STAR   ___
-                                                      ___  ___  ___     ___  ___  ___
+                                                      ___  &soft_off  ___     ___  ___  ___
                         >;
                 };
 
