@@ -65,10 +65,15 @@ ZMK_COMBO(togstno, &tog stn, RB2 RB3 RB4, ALL, 50)
 
 ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50)
 ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
+ZMK_COMBO(kb_power, &soft_off, LT4 LT3 LM4 LM3, ALL, 50)
 
 ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 
 ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
+
+&soft_off {
+    hold-time-ms = <2000>; // Only turn off it the key is held for 5 seconds or longer.
+};
 
 / {
     macros {
@@ -177,7 +182,7 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
    ___  &kp EXCL   &kp AT        &kp HASH    &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS  &kp LPAR  &kp RPAR  &kp GRAVE  ___
    ___  ___        &kp TILDE     &kp GRAVE   &kp SQT   &kp DQT       &kp MINUS  &kp UNDER   &kp LBKT  &kp RBKT  &kp BSLH   ___
    ___  &kp GLOBE  &kp &euro_sign    &kp FSLH    &kp PIPE  &kp BSLH      &kp PLUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp STAR   ___
-                                                      ___  &soft_off  ___     ___  ___  ___
+                                                      ___  ___  ___     ___  ___  ___
                         >;
                 };
 
