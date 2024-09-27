@@ -54,6 +54,10 @@ ZMK_BEHAVIOR(dot_comma, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
+&soft_off {
+    hold-time-ms = <2000>; // Only turn off it the key is held for 5 seconds or longer.
+};
+
 ZMK_COMBO(esc, &kp ESC, LT4 LT3, ALL, 30)
 ZMK_COMBO(glo1, &kp GLOBE, LH2 LH1, ALL, 40)
 ZMK_COMBO(glo2, &kp GLOBE, RH2 RH1, ALL, 40)
@@ -65,15 +69,12 @@ ZMK_COMBO(togstno, &tog stn, RB2 RB3 RB4, ALL, 50)
 
 ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50)
 ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
-ZMK_COMBO(kb_power, &soft_off, LT4 LT3 LM4 LM3, ALL, 50)
+ZMK_COMBO(kb_power_1, &soft_off, LT4 LT3 LT2, ALL, 50)
+ZMK_COMBO(kb_power_2, &soft_off, RT4 RT3 RT2, ALL, 50)
 
 ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 
 ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
-
-&soft_off {
-    hold-time-ms = <2000>; // Only turn off it the key is held for 5 seconds or longer.
-};
 
 / {
     macros {
