@@ -66,7 +66,7 @@ ZMK_COMBO(hyp, &kp HYP, RH0 RH1, ALL, 120)
 
 ZMK_COMBO(tognav, &tog nav, RM0 RM1 RM2, ALL, 50)
 ZMK_COMBO(tognum, &tog num, RT1 RT2 RT3, ALL, 50)
-ZMK_COMBO(togstno, &tog stn, RB2 RB3 RB4, ALL, 50)
+// ZMK_COMBO(togstno, &tog stn, RB2 RB3 RB4, ALL, 50)
 ZMK_COMBO(togneo, &tog neo, LB2 LB3 LB4, ALL, 50)
 
 ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50)
@@ -219,15 +219,15 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
                         >;
                 };
 
-                steno_layer {
-                        label = "Steno";
-                        bindings = <
-   ___  &kp Q    &kp W    &kp E    &kp R    &kp T         &kp U    &kp I    &kp O    &kp P     &kp LBKT   ___
-   ___  &kp A    &kp S    &kp D    &kp F    &kp G         &kp J    &kp K    &kp L    &kp SEMI  &kp SQT    ___
-   ___  ___      ___      ___      ___      ___         ___      ___      ___      ___      ___         ___
-                             &kp MINUS   &kp C    &kp V         &kp N   &kp M   &kp EQUAL
-                        >;
-                };
+   //              steno_layer {
+   //                      label = "Steno";
+   //                      bindings = <
+   // ___  &kp Q    &kp W    &kp E    &kp R    &kp T         &kp U    &kp I    &kp O    &kp P     &kp LBKT   ___
+   // ___  &kp A    &kp S    &kp D    &kp F    &kp G         &kp J    &kp K    &kp L    &kp SEMI  &kp SQT    ___
+   // ___  ___      ___      ___      ___      ___         ___      ___      ___      ___      ___         ___
+   //                           &kp MINUS   &kp C    &kp V         &kp N   &kp M   &kp EQUAL
+   //                      >;
+   //              };
 
                 neo_layer {
                         label = "Neo v2";
