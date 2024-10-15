@@ -28,6 +28,7 @@
 #define num 2
 #define nav 3
 #define stn 4
+#define neo 5
 
 
 &mt {
@@ -66,6 +67,7 @@ ZMK_COMBO(hyp, &kp HYP, RH0 RH1, ALL, 120)
 ZMK_COMBO(tognav, &tog nav, RM0 RM1 RM2, ALL, 50)
 ZMK_COMBO(tognum, &tog num, RT1 RT2 RT3, ALL, 50)
 ZMK_COMBO(togstno, &tog stn, RB2 RB3 RB4, ALL, 50)
+ZMK_COMBO(togneo, &tog neo, LB2 LB3 LB4, ALL, 50)
 
 ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50)
 ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
@@ -176,8 +178,8 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
                         label = "Sym";
 // -----------------------------------------------------------------------------------------
 // |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  (  |  )  |  `  |    |
-// |    | Br+ |Vol+ |Prev |Play |Next |   |  '  |  "  |  [  |  ]  |  \  |    |
-// |    | Br- |Vol- |Mute |     |     |   |  _  |  *  |  {  |  }  | "|" |    |
+// |    |     |  ~  |  `  |  '  |  "  |   |  '  |  "  |  [  |  ]  |  \  |    |
+// |    |  🌎 |  [  |  /  | "|" |  \  |   |  _  |  =  |  {  |  }  |  *  |    |
 //                    |     |     | SPC |   | ENT |     |     |
                         bindings = <
    ___  &kp EXCL   &kp AT        &kp HASH    &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS  &kp LPAR  &kp RPAR  &kp GRAVE  ___
@@ -224,6 +226,16 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
    ___  &kp A    &kp S    &kp D    &kp F    &kp G         &kp J    &kp K    &kp L    &kp SEMI  &kp SQT    ___
    ___  ___      ___      ___      ___      ___         ___      ___      ___      ___      ___         ___
                              &kp MINUS   &kp C    &kp V         &kp N   &kp M   &kp EQUAL
+                        >;
+                };
+
+                neo_layer {
+                        label = "Neo v2";
+                        bindings = <
+   ___  &kp X    &kp V    &kp L    &kp C    &kp W         &kp K    &kp H    &kp G    &kp F    &kp Q    ___
+   ___  &kp U    &kp I    &kp A    &kp E    &kp O         &kp S    &kp N    &kp R    &kp T    &kp D    ___
+   ___  &kp SEMI &kp J    &kp Y    &kp P    &kp B         &kp Z    &kp M    &kp COMMA &kp DOT  &kp SLASH ___
+             &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
                         >;
                 };
         };
