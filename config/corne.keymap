@@ -159,7 +159,7 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        label = "Base";
+                        label = "QWERTY";
 // -----------ESC---------------------------------------------------------------------------
 // |    |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |    |
 // |    |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |    |
@@ -183,13 +183,13 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
                         bindings = <
    ___  &kp EXCL   &kp AT        &kp HASH    &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS  &kp LPAR  &kp RPAR  &kp GRAVE  ___
    ___  ___        &kp TILDE     &kp GRAVE   &kp SQT   &kp DQT       &kp MINUS  &kp UNDER   &kp LBKT  &kp RBKT  &kp BSLH   ___
-   ___  &kp GLOBE  &kp &euro_sign    &kp FSLH    &kp PIPE  &kp BSLH      &kp PLUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp STAR   ___
+   ___  ___        &kp &euro_sign    &kp FSLH    &kp PIPE  &kp BSLH      &kp PLUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp STAR   ___
                                                       ___  ___  ___     ___  ___  ___
                         >;
                 };
 
                 num_layer {
-                        label = "NumPad";
+                        label = "Fn + Num";
 // -----------------------------------------------------------------------------------------
 // |    \ F1 | F2  | F3  | F4  |    |     |  *  |  7  |  8  |  9  |  +  |    |
 // |    | F5 | F6  | F7  | F8  |    |     |  /  |  4  |  5  |  6  |  -  |    |
@@ -229,7 +229,7 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
                 };
 
                 neo_layer {
-                        label = "Noted (Neo)";
+                        label = "Noted";
                         bindings = <
     ___    &kp Z      &kp Y        &kp U       &kp A       &kp Q           &kp P       &kp B       &kp M       &kp L        &kp F   ___
     ___    &kp C      &mt LCTRL S  &mt LALT I  &mt LGUI E  &kp O           &kp D       &mt RGUI T  &mt RALT N  &mt RCTRL R  &kp H   ___
