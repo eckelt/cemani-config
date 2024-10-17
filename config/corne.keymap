@@ -28,7 +28,7 @@
 #define num 2
 #define nav 3
 #define stn 4
-
+#define neo 5
 
 &mt {
     tapping-term-ms = <180>;
@@ -66,6 +66,7 @@ ZMK_COMBO(hyp, &kp HYP, RH0 RH1, ALL, 120)
 ZMK_COMBO(tognav, &tog nav, RM0 RM1 RM2, ALL, 50)
 ZMK_COMBO(tognum, &tog num, RT1 RT2 RT3, ALL, 50)
 ZMK_COMBO(togstno, &tog stn, RB2 RB3 RB4, ALL, 50)
+ZMK_COMBO(togneo, &tog neo, LB2 LB3 LB4, ALL, 50)
 
 ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50)
 ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
@@ -227,7 +228,7 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
                         >;
                 };
 
-                neo_layer{
+                neo_layer {
                         label = "Neo v2";
                         bindings = <
     ___    &kp X    &kp V    &kp L    &kp C    &kp W           &kp J    &kp U    &kp Y    &kp P    &kp Q   ___
