@@ -231,7 +231,7 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
                 neo_layer {
                         label = "Neo v2";
                         bindings = <
-    ___    &kp X      &kp V        &kp L       &kp C       &kp W           &kp J       &kp U       &kp Y       &kp P        &kp Q   ___
+    ___    &kp X      &kp V        &kp L       &kp C       &kp W           &kp K       &kp H       &kp G       &kp F        &kp Q   ___
     ___    &kp U      &mt LCTRL I  &mt LALT A  &mt LGUI O  &kp E           &kp S       &mt RGUI N  &mt RALT R  &mt RCTRL T  &kp D   ___
     ___    &kp SEMI   &kp Y        &kp J       &kp P       &kp Z           &kp B       &kp M       &kp COMMA   &kp DOT      &kp SLASH ___
                  &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
