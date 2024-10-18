@@ -32,6 +32,7 @@
 
 &mt {
     tapping-term-ms = <180>;
+    require-prior-idle-ms = <100>;
     flavor = "tap-preferred";
 };
 &lt {
@@ -152,6 +153,7 @@ ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
                 #binding-cells = <2>;
                 bindings = <&mo>, <&bs_del>;
                 tapping-term-ms = <200>;
+                quick-tap-ms = <200>;
             };
         };
 
