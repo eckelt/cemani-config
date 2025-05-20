@@ -61,6 +61,7 @@ ZMK_BEHAVIOR(dot_comma, mod_morph,
 };
 
 ZMK_COMBO(esc, &kp ESC, LT4 LT3, ALL, 30)
+ZMK_COMBO(studio, &studio_unlock, RT4 RT3, ALL, 30)
 ZMK_COMBO(glo1, &kp GLOBE, LH2 LH1, ALL, 40)
 ZMK_COMBO(glo2, &kp GLOBE, RH2 RH1, ALL, 40)
 ZMK_COMBO(hyp, &kp HYP, RH0 RH1, ALL, 120)
@@ -77,7 +78,6 @@ ZMK_COMBO(kb_power_2, &soft_off, RT4 RT3 RT2, ALL, 50)
 
 ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 
-ZMK_COMBO(eursym, &kp RA(RS(2)), LT2 LM2, ALL, 50)
 
 / {
     macros {
