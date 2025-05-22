@@ -73,8 +73,8 @@ ZMK_COMBO(togneo, &tog neo, LB2 LB3 LB4, ALL, 50)
 
 ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50)
 ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
-ZMK_COMBO(kb_power_1, &soft_off, LT4 LT3 LT2, ALL, 50)
-ZMK_COMBO(kb_power_2, &soft_off, RT4 RT3 RT2, ALL, 50)
+ZMK_COMBO(kb_power_1, &soft_off, LT4 LM4 LB4, ALL, 50)
+ZMK_COMBO(kb_power_2, &soft_off, RT4 RM4 RB4, ALL, 50)
 
 ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 
