@@ -29,6 +29,7 @@
 #define nav 3
 #define stn 4
 #define neo 5
+#define met 6
 
 &mt {
     tapping-term-ms = <180>;
@@ -70,6 +71,7 @@ ZMK_COMBO(tognav, &tog nav, RM0 RM1 RM2, ALL, 50)
 ZMK_COMBO(tognum, &tog num, RT1 RT2 RT3, ALL, 50)
 ZMK_COMBO(togstno, &tog stn, RB2 RB3 RB4, ALL, 50)
 ZMK_COMBO(togneo, &tog neo, LB2 LB3 LB4, ALL, 50)
+ZMK_COMBO(togmet, &tog met, RB1 RB2 RB3, ALL, 50)
 
 ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50)
 ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
@@ -209,9 +211,9 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
                 nav_layer {
                         label = "Nav";
 // -----------------------------------------------------------------------------------------
-// |      | BT1 | BT2 | BT3 | BT4 |  BTCLR |   |home |pg dn|pg up| end |     |     |
+// |      | BT1 | BT2 | BT3 | BT4 |  BT5   |   |home |pg dn|pg up| end |     |     |
 // |      |  🔆 |  🔊 | ⏮️  | ⏯️  |   ⏭️   |   |  <  |  v  |  ^  |  >  |     |     |
-// |      | 🔅  | 🔊  | 🔇  |     | togout |   |     |     |     |     |     |     |
+// |      | 🔅  | 🔊  | 🔇  |BTCLR| togout |   |     |     |     |     |     |     |
 //                       |     |     |     |   |     |     |     |
                         bindings = <
    ___  &bt BT_SEL 0        &bt BT_SEL 1        &bt BT_SEL 2      &bt BT_SEL 3    &bt BT_SEL 4        &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    ___  ___
@@ -237,6 +239,16 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
     ___    &kp Z      &kp Y        &kp U       &kp A       &kp Q           &kp P       &kp B       &kp M       &kp L        &kp F   ___
     ___    &kp C      &mt LCTRL S  &mt LALT I  &mt LGUI E  &kp O           &kp D       &mt RGUI T  &mt RALT N  &mt RCTRL R  &kp H   ___
     ___    &kp V      &kp X        &kp J       &kp SEMI    &kp SLASH       &kp W       &kp G       &kp COMMA   &kp DOT      &kp K   ___
+                 &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
+                        >;
+                };
+
+                met_layer {
+                        label = "Meeting";
+                        bindings = <
+    ___       ___       ___       ___       ___       ___              &kp RG(RS(K))   ___             ___             ___             ___       ___
+    ___       ___       ___       ___       ___       ___              ___             ___             ___             ___             ___       ___
+    ___       ___       ___       ___       ___       ___              &kp RG(RS(O))   &kp RG(RS(M))   &kp RG(RS(E))   &kp RG(RS(H))   ___       ___
                  &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
                         >;
                 };
