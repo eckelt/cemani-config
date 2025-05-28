@@ -246,9 +246,9 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
                 met_layer {
                         label = "Meeting";
                         bindings = <
-    ___       ___       ___       ___       ___       ___              &kp RG(RS(K))   ___             ___             ___             ___       ___
-    ___       ___       ___       ___       ___       ___              ___             ___             ___             ___             ___       ___
-    ___       ___       ___       ___       ___       ___              &kp RG(RS(O))   &kp RG(RS(M))   &kp RG(RS(E))   &kp RG(RS(H))   ___       ___
+    ___       ___                 ___                 ___               ___       ___              &kp RG(RS(K))   ___             ___             ___             ___       ___
+    ___       &mt LSHFT C_BRI_UP  &mt LCTRL C_VOL_UP  ___               ___       ___              ___             ___             ___             ___             ___       ___
+    ___       &kp C_BRI_DN        &kp C_VOL_DN        &kp C_MUTE        ___       ___              &kp RG(RS(O))   &kp RG(RS(M))   &kp RG(RS(E))   &kp RG(RS(H))   ___       ___
                  &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
                         >;
                 };
