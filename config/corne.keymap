@@ -24,11 +24,11 @@
 #define HYP LS(LC(LA(LGUI)))
 
 #define def 0
-#define sym 1
-#define num 2
-#define nav 3
-#define stn 4
-#define neo 5
+#define neo 1
+#define sym 2
+#define num 3
+#define nav 4
+#define stn 5
 #define met 6
 
 &mt {
@@ -67,11 +67,11 @@ ZMK_COMBO(glo1, &kp GLOBE, LH2 LH1, ALL, 40)
 ZMK_COMBO(glo2, &kp GLOBE, RH2 RH1, ALL, 40)
 ZMK_COMBO(hyp, &kp HYP, RH0 RH1, ALL, 120)
 
-ZMK_COMBO(tognav, &tog nav, RM0 RM1 RM2, ALL, 50)
-ZMK_COMBO(tognum, &tog num, RT1 RT2 RT3, ALL, 50)
-ZMK_COMBO(togstno, &tog stn, RB2 RB3 RB4, ALL, 50)
+// ZMK_COMBO(tognav, &tog nav, RM0 RM1 RM2, ALL, 50)
+// ZMK_COMBO(tognum, &tog num, RT1 RT2 RT3, ALL, 50)
+// ZMK_COMBO(togstno, &tog stn, RB2 RB3 RB4, ALL, 50)
 ZMK_COMBO(togneo, &tog neo, LB2 LB3 LB4, ALL, 50)
-ZMK_COMBO(togmet, &tog met, RB1 RB2 RB3, ALL, 50)
+ZMK_COMBO(togmet, &tog met, RB1 RB2 RB3, sym, 50)
 
 ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50)
 ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
@@ -179,6 +179,16 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
                         >;
                 };
 
+                neo_layer {
+                        label = "Noted";
+                        bindings = <
+    ___    &kp Z      &kp Y        &kp U       &kp A       &kp Q           &kp P       &kp B       &kp M       &kp L        &kp F   ___
+    ___    &kp C      &mt LCTRL S  &mt LALT I  &mt LGUI E  &kp O           &kp D       &mt RGUI T  &mt RALT N  &mt RCTRL R  &kp H   ___
+    ___    &kp V      &kp X        &kp J       &kp SEMI    &kp SLASH       &kp W       &kp G       &kp COMMA   &kp DOT      &kp K   ___
+                    &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
+                        >;
+                };
+
                 raise_layer {
                         label = "Sym";
 // -----------------------------------------------------------------------------------------
@@ -231,16 +241,6 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
    ___  &kp A    &kp S    &kp D    &kp F    &kp G         &kp J    &kp K    &kp L    &kp SEMI  &kp SQT    ___
    ___  ___      ___      ___      ___      ___         ___      ___      ___      ___      ___         ___
                              &kp MINUS   &kp C    &kp V         &kp N   &kp M   &kp EQUAL
-                        >;
-                };
-
-                neo_layer {
-                        label = "Noted";
-                        bindings = <
-    ___    &kp Z      &kp Y        &kp U       &kp A       &kp Q           &kp P       &kp B       &kp M       &kp L        &kp F   ___
-    ___    &kp C      &mt LCTRL S  &mt LALT I  &mt LGUI E  &kp O           &kp D       &mt RGUI T  &mt RALT N  &mt RCTRL R  &kp H   ___
-    ___    &kp V      &kp X        &kp J       &kp SEMI    &kp SLASH       &kp W       &kp G       &kp COMMA   &kp DOT      &kp K   ___
-                 &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
                         >;
                 };
 
