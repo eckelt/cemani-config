@@ -99,7 +99,7 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
                 compatible = "zmk,keymap";
 
                 neo_layer {
-                        label = "Noted";
+                        label = "ABC";
 // -----------ESC---------------------------------------------------------------------------
 // |    |  Z  |  Y  |  U  |  A  |  Q  |   |  P  |  B  |  M  |  L  |  F  |    |
 // |    |  C  |  S  |  I  |  E  |  O  |   |  D  |  T  |  N  |  R  |  H  |    |
@@ -129,7 +129,7 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
                 };
 
                 raise_layer {
-                        label = "Sym";
+                        label = "#+=";
 // -----------------------------------------------------------------------------------------
 // |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  (  |  )  |  `  |    |
 // |    | Br+ |Vol+ |Prev |Play |Next |   |  '  |  "  |  [  |  ]  |  \  |    |
@@ -138,13 +138,13 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
                         bindings = <
    ___  &kp EXCL   &kp AT        &kp HASH    &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS  &kp LPAR  &kp RPAR  &kp GRAVE  ___
    ___  ___        &kp TILDE     &kp GRAVE   &kp SQT   &kp DQT       &kp MINUS  &kp UNDER   &kp LBKT  &kp RBKT  &kp BSLH   ___
-   ___  ___        &kp &euro_sign    &kp FSLH    &kp PIPE  &kp BSLH      &kp PLUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp STAR   ___
+   ___  ___        ___           &kp FSLH    &kp PIPE  &kp BSLH      &kp PLUS  &kp EQUAL  &kp LBRC  &kp RBRC  &kp STAR   ___
                                                       ___  ___  ___     ___  ___  ___
                         >;
                 };
 
                 num_layer {
-                        label = "Fn + Num";
+                        label = "123";
 // -----------------------------------------------------------------------------------------
 // |    \ F1 | F2  | F3  | F4  |    |     |  *  |  7  |  8  |  9  |  +  |    |
 // |    | F5 | F6  | F7  | F8  |    |     |  /  |  4  |  5  |  6  |  -  |    |
@@ -159,7 +159,7 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
                 };
 
                 nav_layer {
-                        label = "Nav";
+                        label = "<v^>";
 // -----------------------------------------------------------------------------------------
 // |      | BT1 | BT2 | BT3 | BT4 |  BT5   |   |home |pg dn|pg up| end |     |     |
 // |      |  🔆 |  🔊 | ⏮️  | ⏯️  |   ⏭️   |   |  <  |  v  |  ^  |  >  |     |     |
@@ -169,7 +169,7 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
    ___  &bt BT_SEL 0        &bt BT_SEL 1        &bt BT_SEL 2      &bt BT_SEL 3    &bt BT_SEL 4        &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    ___  ___
    ___  &mt LSHFT C_BRI_UP  &mt LCTRL C_VOL_UP  &mt LALT C_PREV   &mt LGUI C_PP   &kp C_NEXT          &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  ___  ___
    ___  &kp C_BRI_DN        &kp C_VOL_DN        &kp C_MUTE        ___             &out OUT_TOG        ___        ___            ___          ___        ___  ___
-                                                                    ___  &bt_disc_all  ___     ___  ___  ___
+                                                                    ___  ___  ___     ___  ___  ___
                         >;
                 };
 
@@ -184,12 +184,12 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
                 };
 
                 met_layer {
-                        label = "Meeting";
+                        label = "Teams";
                         bindings = <
     ___       ___                 ___                 ___               ___       ___              &kp RG(RS(K))   ___             ___             ___             ___       ___
     ___       &mt LSHFT C_BRI_UP  &mt LCTRL C_VOL_UP  ___               ___       ___              ___             ___             ___             ___             ___       ___
     ___       &kp C_BRI_DN        &kp C_VOL_DN        &kp C_MUTE        ___       ___              &kp RG(RS(O))   &kp RG(RS(M))   &kp RG(RS(E))   &kp RG(RS(H))   ___       ___
-                 &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
+                                                                             ___  ___  ___     ___  ___  ___
                         >;
                 };
         };
