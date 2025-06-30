@@ -151,8 +151,8 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 // |    | F9 | F10 | F11 | F12 |    |     |  :  |  1  |  2  |  3  | . , |    |
 //                 |     |     |     |   | ENT | BCKS |  0  |
                         bindings = <
-   ___  &kp F1        &kp F2        &kp F3       &kp F4       &kp &ae_lc        &kp STAR   &kp N7       &kp N8       &kp N9        &kp PLUS         ___
-   ___  &mt LSHFT F5  &mt LCTRL F6  &mt LALT F7  &mt LGUI F8  &kp &mod_ae       &kp FSLH   &mt RGUI N4  &mt RALT N5  &mt RCTRL N6  &mt RSHFT MINUS  ___
+   ___  &kp F1        &kp F2        &kp F3       &kp F4       ___               &kp STAR   &kp N7       &kp N8       &kp N9        &kp PLUS         ___
+   ___  &mt LSHFT F5  &mt LCTRL F6  &mt LALT F7  &mt LGUI F8  ___               &kp FSLH   &mt RGUI N4  &mt RALT N5  &mt RCTRL N6  &mt RSHFT MINUS  ___
    ___  &kp F9        &kp F10       &kp F11      &kp F12      &kp EQUAL         &kp COLON  &kp N1       &kp N2       &kp N3        &dot_comma       ___
                                                        ___  ___  ___              &kp RET   &bs_del   &mt RSHFT N0
                         >;
