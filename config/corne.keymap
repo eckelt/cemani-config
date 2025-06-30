@@ -23,8 +23,8 @@
 #define MEH LS(LC(LALT))
 #define HYP LS(LC(LA(LGUI)))
 
-#define def 0
-#define neo 1
+#define neo 0
+#define def 1
 #define sym 2
 #define num 3
 #define nav 4
@@ -164,6 +164,16 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
         keymap {
                 compatible = "zmk,keymap";
 
+                neo_layer {
+                        label = "Noted";
+                        bindings = <
+    ___    &kp Z      &kp Y        &kp U       &kp A       &kp Q           &kp P       &kp B       &kp M       &kp L        &kp F   ___
+    ___    &kp C      &mt LCTRL S  &mt LALT I  &mt LGUI E  &kp O           &kp D       &mt RGUI T  &mt RALT N  &mt RCTRL R  &kp H   ___
+    ___    &kp V      &kp X        &kp J       &kp SEMI    &kp SLASH       &kp W       &kp G       &kp COMMA   &kp DOT      &kp K   ___
+                    &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
+                        >;
+                };
+
                 default_layer {
                         label = "QWERTY";
 // -----------ESC---------------------------------------------------------------------------
@@ -176,16 +186,6 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
    ___  &kp A    &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G         &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &kp SEMI   ___
    ___  &kp Z    &kp X       &kp C       &kp V       &kp B         &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH   ___
                       &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
-                        >;
-                };
-
-                neo_layer {
-                        label = "Noted";
-                        bindings = <
-    ___    &kp Z      &kp Y        &kp U       &kp A       &kp Q           &kp P       &kp B       &kp M       &kp L        &kp F   ___
-    ___    &kp C      &mt LCTRL S  &mt LALT I  &mt LGUI E  &kp O           &kp D       &mt RGUI T  &mt RALT N  &mt RCTRL R  &kp H   ___
-    ___    &kp V      &kp X        &kp J       &kp SEMI    &kp SLASH       &kp W       &kp G       &kp COMMA   &kp DOT      &kp K   ___
-                    &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
                         >;
                 };
 
