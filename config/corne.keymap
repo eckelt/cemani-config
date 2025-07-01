@@ -24,7 +24,7 @@
 #define HYP LS(LC(LA(LGUI)))
 
 #define neo 0
-#define def 1
+#define qwt 1
 #define sym 2
 #define num 3
 #define nav 4
@@ -70,7 +70,7 @@ ZMK_COMBO(hyp, &kp HYP, RH0 RH1, ALL, 120)
 // ZMK_COMBO(tognav, &tog nav, RM0 RM1 RM2, ALL, 50)
 // ZMK_COMBO(tognum, &tog num, RT1 RT2 RT3, ALL, 50)
 // ZMK_COMBO(togstno, &tog stn, RB2 RB3 RB4, ALL, 50)
-ZMK_COMBO(togneo, &tog neo, LB2 LB3 LB4, ALL, 50)
+ZMK_COMBO(togqwt, &tog qwt, LB2 LB3 LB4, ALL, 50)
 ZMK_COMBO(togmet, &tog met, RB1 RB2 RB3, sym, 50)
 
 ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50)
