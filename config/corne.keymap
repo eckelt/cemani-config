@@ -55,35 +55,31 @@ ZMK_BEHAVIOR(dot_comma, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
+ZMK_COMBO(esc, &kp ESC, LT4 LT3, ALL, 30);
+ZMK_COMBO(studio, &studio_unlock, RT3 RT4, ALL, 30);
+ZMK_COMBO(glo1, &kp GLOBE, LH2 LH1, ALL, 40);
+ZMK_COMBO(glo2, &kp GLOBE, RH1 RH2, ALL, 40);
+ZMK_COMBO(hyp, &kp HYP, RH0 RH1, ALL, 120);
+
+// ZMK_COMBO(tognav, &tog nav, RM0 RM1 RM2, ALL, 50);
+// ZMK_COMBO(tognum, &tog num, RT1 RT2 RT3, ALL, 50);
+// ZMK_COMBO(togstno, &tog stn, RB2 RB3 RB4, ALL, 50);
+ZMK_COMBO(togqwt, &tog qwt, LB2 LB3 LB4, ALL, 50);
+ZMK_COMBO(togmet, &tog met, RB1 RB2 RB3, sym, 50);
+
+ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50);
+ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50);
+ZMK_COMBO(kb_power_1, &soft_off, LT4 LM4 LB4, ALL, 50);
+ZMK_COMBO(kb_power_2, &soft_off, RT4 RM4 RB4, ALL, 50);
+ZMK_COMBO(btrst, &bt BT_CLR, LB0 LB1, nav, 50);
+
+ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50);
+
 &soft_off {
     split-peripheral-off-on-press;
 };
 
 / {
-        combos {
-            compatible = "zmk,combos";
-
-            ZMK_COMBO(esc, &kp ESC, LT4 LT3, ALL, 30);
-            ZMK_COMBO(studio, &studio_unlock, RT3 RT4, ALL, 30);
-            ZMK_COMBO(glo1, &kp GLOBE, LH2 LH1, ALL, 40);
-            ZMK_COMBO(glo2, &kp GLOBE, RH1 RH2, ALL, 40);
-            ZMK_COMBO(hyp, &kp HYP, RH0 RH1, ALL, 120);
-
-            // ZMK_COMBO(tognav, &tog nav, RM0 RM1 RM2, ALL, 50);
-            // ZMK_COMBO(tognum, &tog num, RT1 RT2 RT3, ALL, 50);
-            // ZMK_COMBO(togstno, &tog stn, RB2 RB3 RB4, ALL, 50);
-            ZMK_COMBO(togqwt, &tog qwt, LB2 LB3 LB4, ALL, 50);
-            ZMK_COMBO(togmet, &tog met, RB1 RB2 RB3, sym, 50);
-
-            ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50);
-            ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50);
-            ZMK_COMBO(kb_power_1, &soft_off, LT4 LM4 LB4, ALL, 50);
-            ZMK_COMBO(kb_power_2, &soft_off, RT4 RM4 RB4, ALL, 50);
-            ZMK_COMBO(btrst, &bt BT_CLR, LB0 LB1, nav, 50);
-
-            ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50);
-        };
-
         behaviors {
             lt_bspc: layer_tap_bspc_del {
                 compatible = "zmk,behavior-hold-tap";
