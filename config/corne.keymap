@@ -12,7 +12,6 @@
 #define HOST_OS 2
 #include "../nodefree/helper.h"
 #include "../nodefree/keypos_def/keypos_42keys.h"
-#include "../nodefree/international_chars/german.dtsi"
 
 #define ___ &trans
 #define MEH LS(LC(LALT))
