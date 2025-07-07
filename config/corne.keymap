@@ -66,7 +66,7 @@ ZMK_BEHAVIOR(dot_comma, mod_morph,
             combo_esc {
                 timeout-ms = <30>;
                 bindings = <&kp ESC>;
-                key-positions = <LT4 LT3>;
+                key-positions = <0 1>;
                 layers = <ALL>;
             };
             combo_studio {
