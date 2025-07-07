@@ -10,11 +10,6 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define HOST_OS 2
-// activate macOS-mode for helper script
-#undef OS_UNICODE_LEAD
-#undef OS_UNICODE_TRAIL
-#define OS_UNICODE_LEAD &macro_press &kp LALT  // <- macOS compose sequence (must be activated in system preferences)
-#define OS_UNICODE_TRAIL &macro_release &kp LALT  // <- Releasing Left-Alt terminates unicode input on macOns
 #include "../nodefree/helper.h"
 #include "../nodefree/keypos_def/keypos_42keys.h"
 #include "../nodefree/international_chars/german.dtsi"
