@@ -97,13 +97,13 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
                 compatible = "zmk,keymap";
 
                 neo_layer {
-                        label = "ABC";
 //  ╭─────────────────────┬─────────────────────╮
 //  │  Z   Y   U   A   Q  |  P   B   M   L   F  │
 //  │  C   S   I   E   O  │  D   T   N   R   H  │
 //  │  V   X   J   ;   /  |  W   G   ,   .   K  │
 //  ╰───────╮ Sft Tab Spc │ Ret Bck Sft ╭───────╯
 //          ╰─────────────┴─────────────╯
+                        label = "ABC";
                         bindings = <
     ___    &kp Z      &kp Y        &kp U       &kp A       &kp Q           &kp P       &kp B       &kp M       &kp L        &kp F   ___
     ___    &kp C      &mt LCTRL S  &mt LALT I  &mt LGUI E  &kp O           &kp D       &mt RGUI T  &mt RALT N  &mt RCTRL R  &kp H   ___
@@ -208,6 +208,17 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
                         >;
                 };
 
+
+                teams_layer {
+                        label = "Teams";
+                        bindings = <
+    ___       ___                 ___                 ___               ___       ___              &kp RG(RS(K))   ___             ___             ___             ___       ___
+    ___       &mt LSHFT C_BRI_UP  &mt LCTRL C_VOL_UP  ___               ___       ___              ___             ___             ___             ___             ___       ___
+    ___       &kp C_BRI_DN        &kp C_VOL_DN        &kp C_MUTE        ___       ___              &kp RG(RS(O))   &kp RG(RS(M))   &kp RG(RS(E))   &kp RG(RS(H))   &tog met  ___
+                                                                             ___  ___  ___     ___  ___  ___
+                        >;
+                };
+
                 layer_layer {
                         label = "Layer";
 //  ╭─────────────────────┬─────────────────────╮
@@ -224,14 +235,5 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
                         >;
                 };
 
-                met_layer {
-                        label = "Teams";
-                        bindings = <
-    ___       ___                 ___                 ___               ___       ___              &kp RG(RS(K))   ___             ___             ___             ___       ___
-    ___       &mt LSHFT C_BRI_UP  &mt LCTRL C_VOL_UP  ___               ___       ___              ___             ___             ___             ___             ___       ___
-    ___       &kp C_BRI_DN        &kp C_VOL_DN        &kp C_MUTE        ___       ___              &kp RG(RS(O))   &kp RG(RS(M))   &kp RG(RS(E))   &kp RG(RS(H))   &tog met  ___
-                                                                             ___  ___  ___     ___  ___  ___
-                        >;
-                };
         };
 };
