@@ -28,9 +28,9 @@
 #define sym 3
 #define num 4
 #define nav 5
-#define stn 6
-#define met 7
-#define lay 8
+#define met 6
+#define lay 7
+#define stn 8
 
 &mt {
     tapping-term-ms = <220>;
@@ -192,23 +192,6 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
                         >;
                 };
 
-                steno_layer {
-                        label = "Steno";
-//  ╭─────────────────────┬─────────────────────╮
-//  │  Q   W   E   R   T  │  U   I   O   P   (  |
-//  |  A   S   D   F   G  |  J   K   L   ;   '  |
-//  |                     |                     |
-//  ╰───────╮  -  C   V   │  N   M   =  ╭───────╯
-//          ╰─────────────┴─────────────╯
-                        bindings = <
-   ___  &kp Q    &kp W    &kp E    &kp R    &kp T         &kp U    &kp I    &kp O    &kp P     &kp LBKT   ___
-   ___  &kp A    &kp S    &kp D    &kp F    &kp G         &kp J    &kp K    &kp L    &kp SEMI  &kp SQT    ___
-   ___  ___      ___      ___      ___      ___         ___      ___      ___      ___      ___         ___
-                             &kp MINUS   &kp C    &kp V         &kp N   &kp M   &kp EQUAL
-                        >;
-                };
-
-
                 teams_layer {
                         label = "Teams";
                         bindings = <
@@ -221,16 +204,32 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 
                 layer_layer {
                         label = "Layer";
+//  ╭───────────────────────────┬───────────────────────────╮
+//  │  Neo  Col  Qwe  Sym  Num  │                           |
+//  |  Nav  Stn  Tem            |                           |
+//  |                           |                           |
+//  ╰───────╮                   │                   ╭───────╯
+//          ╰───────────────────┴───────────────────╯
+                        bindings = <
+   ___    &to neo  &to col  &to qwt  &to sym  &to num         ___    ___    ___    ___    ___    ___
+   ___    &to nav  &to met  &to stn  ___      ___             ___    ___    ___    ___    ___    ___
+   ___    ___      ___      ___      ___      ___             ___    ___    ___    ___    ___    ___
+                                        ___  ___  ___     ___  ___  ___
+                        >;
+                };
+
+                steno_layer {
+                        label = "Steno";
 //  ╭─────────────────────┬─────────────────────╮
-//  │  Neo  Col  Qwe      │                     |
+//  │  Q   W   E   R   T  │  U   I   O   P   (  |
+//  |  A   S   D   F   G  |  J   K   L   ;   '  |
 //  |                     |                     |
-//  |                     |                     |
-//  ╰───────╮             │             ╭───────╯
+//  ╰───────╮  -  C   V   │  N   M   =  ╭───────╯
 //          ╰─────────────┴─────────────╯
                         bindings = <
-   ___    &to neo &to col &to qwt  ___    ___         ___    ___    ___    ___    ___    ___
-   ___    ___     ___     ___      ___     ___         ___    ___    ___    ___    ___    ___
-   ___    ___     ___     ___      ___     ___         ___    ___    ___    ___    ___    ___
+   ___  &kp Q    &kp W    &kp E    &kp R    &kp T         &kp U    &kp I    &kp O    &kp P     &kp LBKT   ___
+   ___  &kp A    &kp S    &kp D    &kp F    &kp G         &kp J    &kp K    &kp L    &kp SEMI  &kp SQT    ___
+   ___  ___      ___      ___      ___      ___         ___      ___      ___      ___      ___         ___
                              &kp MINUS   &kp C    &kp V         &kp N   &kp M   &kp EQUAL
                         >;
                 };
