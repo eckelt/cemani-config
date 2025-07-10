@@ -23,12 +23,13 @@
 #define HYP LS(LC(LA(LGUI)))
 
 #define neo 0
-#define qwt 1
-#define sym 2
-#define num 3
-#define nav 4
-#define stn 5
-#define met 6
+#define col 1
+#define qwt 2
+#define sym 3
+#define num 4
+#define nav 5
+#define stn 6
+#define met 7
 
 &mt {
     tapping-term-ms = <220>;
@@ -107,6 +108,22 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
     ___    &kp C      &mt LCTRL S  &mt LALT I  &mt LGUI E  &kp O           &kp D       &mt RGUI T  &mt RALT N  &mt RCTRL R  &kp H   ___
     ___    &kp V      &kp X        &kp J       &kp SEMI    &kp SLASH       &kp W       &kp G       &kp COMMA   &kp DOT      &kp K   ___
                     &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
+                        >;
+                };
+
+                col_layer {
+                        label = "Colmak";
+//  ╭─────────────────────┬─────────────────────╮
+//  │  Z   Y   U   A   Q  |  P   B   M   L   F  │
+//  │  C   S   I   E   O  │  D   T   N   R   H  │
+//  │  V   X   J   ;   /  |  W   G   ,   .   K  │
+//  ╰───────╮ Sft Tab Spc │ Ret Bck Sft ╭───────╯
+//          ╰─────────────┴─────────────╯
+                        bindings = <
+    ___    &kp Q      &kp W        &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y        &kp SEMI   ___
+    ___    &kp A      &mt LCTRL R  &mt LALT S  &mt LGUI T  &kp G           &kp M       &mt RGUI N  &mt RALT E  &mt RCTRL I  &kp O      ___
+    ___    &kp Z      &kp X        &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT      &kp SLASH  ___
+                   &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
                         >;
                 };
 
