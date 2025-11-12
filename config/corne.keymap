@@ -123,9 +123,9 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 //          ╰─────────────┴─────────────╯
                         label = "ABC";
                         bindings = <
-    ___    &trans      &trans        &kp DE_U_UMLAUT  &kp DE_A_UMLAUT    &trans           &trans       &trans       &trans       &trans        &trans   ___
-    ___    &trans      &trans        &trans       &trans       &kp DE_O_UMLAUT        &trans       &trans       &trans       &trans        &trans   ___
-    ___    &trans      &trans        &trans       &trans       &trans           &trans       &trans       &trans       &trans        &trans   ___
+    ___    &trans      &trans          &kp DE_U_UMLAUT  &kp DE_A_UMLAUT  &trans           &trans       &trans       &trans       &trans        &trans   ___
+    ___    &trans      &kp DE_SHARP_S  &trans           &kp DE_EURO      &kp DE_O_UMLAUT  &trans       &trans       &trans       &trans        &trans   ___
+    ___    &trans      &trans          &trans           &trans           &trans           &trans       &trans       &trans       &trans        &trans   ___
                     &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
                         >;
                 };
