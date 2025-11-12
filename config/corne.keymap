@@ -23,14 +23,15 @@
 #define HYP LS(LC(LA(LGUI)))
 
 #define neo 0
-#define col 1
-#define qwt 2
-#define sym 3
-#define num 4
-#define nav 5
-#define met 6
-#define lay 7
-#define stn 8
+#define uml 1 
+#define col 2
+#define qwt 3
+#define sym 4
+#define num 5
+#define nav 6
+#define met 7
+#define lay 8
+#define stn 9
 
 &mt {
     tapping-term-ms = <220>;
@@ -106,8 +107,24 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
                         label = "ABC";
                         bindings = <
     ___    &kp Z      &kp Y        &kp U       &kp A       &kp Q           &kp P       &kp B       &kp M       &kp L        &kp F   ___
-    ___    &kp C      &mt LCTRL S  &mt LALT I  &mt LGUI E  &kp O           &kp D       &mt RGUI T  &mt RALT N  &mt RCTRL R  &kp H   ___
+    ___    &kp C      &mt LCTRL S  &mt LALT I  &mt LGUI E  &kp O           &kp D       &mt RGUI T  &mt RALT N  &mt RCTRL R  &lt uml H   ___
     ___    &kp V      &kp X        &kp J       &kp SEMI    &kp SLASH       &kp W       &kp G       &kp COMMA   &kp DOT      &kp K   ___
+                    &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
+                        >;
+                };
+
+                uml_layer {
+//  ╭─────────────────────┬─────────────────────╮
+//  │          Ü   Ä      |                     │
+//  │      ß           Ö  │                     │
+//  │                     |                     │
+//  ╰───────╮ Sft Tab Spc │ Ret Bck Sft ╭───────╯
+//          ╰─────────────┴─────────────╯
+                        label = "ABC";
+                        bindings = <
+    ___    &trans      &trans        &kp DE_UE    &kp DE_AE    &trans           &trans       &trans       &trans       &trans        &trans   ___
+    ___    &trans      &trans        &trans       &trans       &kp DE_OE        &trans       &trans       &trans       &trans        &trans   ___
+    ___    &trans      &trans        &trans       &trans       &trans           &trans       &trans       &trans       &trans        &trans   ___
                     &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
                         >;
                 };
