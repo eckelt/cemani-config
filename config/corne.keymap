@@ -105,7 +105,7 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 //  │  V   X   J   ;   /  |  W   G   ,   .   K  │
 //  ╰───────╮ Sft Tab Spc │ Ret Bck Sft ╭───────╯
 //          ╰─────────────┴─────────────╯
-                        label = "ABC";
+                        label = "ÄÖÜ";
                         bindings = <
     ___    &kp Y      &kp Z        &kp U       &kp A       &kp Q           &kp P       &kp B       &kp M       &kp L        &kp F   ___
     ___    &kp C      &mt LCTRL S  &mt LALT I  &mt LGUI E  &kp O           &kp D       &mt RGUI T  &mt RALT N  &mt RCTRL R  &lt uml H   ___
