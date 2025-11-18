@@ -165,15 +165,15 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
                 raise_layer {
                         label = "#+=";
 //  ╭─────────────────────┬─────────────────────╮
-//  │  !   @   #   $   %  │  ^   &   (   )   `  |
-//  |     ~    `   '   "  |  -   _   [   ]   \  |
-//  |          /   |   \  |  +   =   {   }   *  |
+//  │  !   @   Ü   Ä   %  │  ^   &   (   )   /  |
+//  |  #   ß   *   €   Ö  |  -   +   [   ]   \  |
+//  |  ~   $   `   '   "  |  _   =   {   }   |  |
 //  ╰───────╮ Sft Tab Spc │ Ret Bck Sft ╭───────╯
 //          ╰─────────────┴─────────────╯
                         bindings = <
-   ___  &kp DE_EXCL   &kp DE_AT        &kp DE_HASH    &kp DE_DLLR  &kp DE_PRCNT     &kp DE_CARET  &kp DE_AMPS  &kp DE_LPAR  &kp DE_RPAR  &kp DE_GRAVE  ___
-   ___  ___        &kp DE_TILDE     &kp DE_GRAVE   &kp DE_SQT   &kp DE_DQT       &kp DE_MINUS  &kp DE_UNDER   &kp DE_LBKT  &kp DE_RBKT  &kp DE_BSLH   ___
-   ___  ___        ___           &kp DE_FSLH    &kp DE_PIPE  &kp DE_BSLH      &kp DE_PLUS  &kp DE_EQUAL  &kp DE_LBRC  &kp DE_RBRC  &kp DE_STAR   ___
+   ___  &kp DE_EXCL   &kp DE_AT      &kp DE_U_UMLAUT  &kp DE_A_UMLAUT  &kp DE_PRCNT     &kp DE_CARET  &kp DE_AMPS   &kp DE_LPAR  &kp DE_RPAR  &kp DE_FSLH   ___
+   ___  &kp DE_HASH   &kp DE_SHARP_S &kp DE_STAR      &kp DE_EURO      &kp DE_O_UMLAUT  &kp DE_MINUS  &kp DE_PLUS   &kp DE_LBKT  &kp DE_RBKT  &kp DE_BSLH   ___
+   ___  &kp DE_TILDE  &kp DE_DLLR    &kp DE_GRAVE     &kp DE_SQT       &kp DE_DQT       &kp DE_UNDER  &kp DE_EQUAL  &kp DE_LBRC  &kp DE_RBRC  &kp DE_STAR   ___
                                                       ___  ___  ___     ___  ___  ___
                         >;
                 };
