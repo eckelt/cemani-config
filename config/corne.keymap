@@ -105,28 +105,12 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 //  │  V   X   J   ;   /  |  W   G   ,   .   K  │
 //  ╰───────╮ Sft Tab Spc │ Ret Bck Sft ╭───────╯
 //          ╰─────────────┴─────────────╯
-                        label = "ÄÖÜ";
-                        bindings = <
-    ___    &kp Y      &kp Z        &kp U       &kp A       &kp Q           &kp P       &kp B       &kp M       &kp L        &kp F   ___
-    ___    &kp C      &mt LCTRL S  &mt LALT I  &mt LGUI E  &kp O           &kp D       &mt RGUI T  &mt RALT N  &mt RCTRL R  &lt uml H   ___
-    ___    &kp V      &kp X        &kp J       &kp SEMI    &kp SLASH       &kp W       &kp G       &kp COMMA   &kp DOT      &kp K   ___
-                               &sl uml  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
-                        >;
-                };
-
-                uml_layer {
-//  ╭─────────────────────┬─────────────────────╮
-//  │          Ü   Ä      |                     │
-//  │      ß           Ö  │                     │
-//  │                     |                     │
-//  ╰───────╮ Sft Tab Spc │ Ret Bck Sft ╭───────╯
-//          ╰─────────────┴─────────────╯
                         label = "ABC";
                         bindings = <
-    ___    &trans      &trans          &kp DE_U_UMLAUT  &kp DE_A_UMLAUT  &trans           &trans       &trans       &trans       &trans        &trans   ___
-    ___    &trans      &kp DE_SHARP_S  &trans           &kp DE_EURO      &kp DE_O_UMLAUT  &trans       &trans       &trans       &trans        &trans   ___
-    ___    &trans      &trans          &trans           &trans           &trans           &trans       &trans       &trans       &trans        &trans   ___
-                    &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
+    ___    &kp Y      &kp Z        &kp U       &kp A        &kp Q           &kp P       &kp B       &kp M       &kp L        &kp F   ___
+    ___    &kp C      &mt LCTRL S  &mt LALT I  &mt LGUI E   &kp O           &kp D       &mt RGUI T  &mt RALT N  &mt RCTRL R  &kp H   ___
+    ___    &kp V      &kp X        &kp J       &kp DE_SEMI  &kp DE_SLASH    &kp W       &kp G       &kp COMMA   &kp DOT      &kp K   ___
+                               &sl uml  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
                         >;
                 };
 
@@ -167,13 +151,13 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 //  ╭─────────────────────┬─────────────────────╮
 //  │  !   @   Ü   Ä   %  │  ^   &   (   )   /  |
 //  |  #   ß   *   €   Ö  |  -   +   [   ]   \  |
-//  |  ~   $   `   '   "  |  _   =   {   }   |  |
+//  |  $   ~   `   '   "  |  _   =   {   }   |  |
 //  ╰───────╮ Sft Tab Spc │ Ret Bck Sft ╭───────╯
 //          ╰─────────────┴─────────────╯
                         bindings = <
    ___  &kp DE_EXCL   &kp DE_AT      &kp DE_U_UMLAUT  &kp DE_A_UMLAUT  &kp DE_PRCNT     &kp DE_CARET  &kp DE_AMPS   &kp DE_LPAR  &kp DE_RPAR  &kp DE_FSLH   ___
    ___  &kp DE_HASH   &kp DE_SHARP_S &kp DE_STAR      &kp DE_EURO      &kp DE_O_UMLAUT  &kp DE_MINUS  &kp DE_PLUS   &kp DE_LBKT  &kp DE_RBKT  &kp DE_BSLH   ___
-   ___  &kp DE_TILDE  &kp DE_DLLR    &kp DE_GRAVE     &kp DE_SQT       &kp DE_DQT       &kp DE_UNDER  &kp DE_EQUAL  &kp DE_LBRC  &kp DE_RBRC  &kp DE_STAR   ___
+   ___  &kp DE_DLLR   &kp DE_TILDE   &kp DE_GRAVE     &kp DE_SQT       &kp DE_DQT       &kp DE_UNDER  &kp DE_EQUAL  &kp DE_LBRC  &kp DE_RBRC  &kp DE_STAR   ___
                                                       ___  ___  ___     ___  ___  ___
                         >;
                 };
