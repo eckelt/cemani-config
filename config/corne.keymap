@@ -24,15 +24,13 @@
 #define HYP LS(LC(LA(LGUI)))
 
 #define neo 0
-#define uml 1 
-#define col 2
-#define qwt 3
-#define sym 4
-#define num 5
-#define nav 6
-#define met 7
-#define lay 8
-#define stn 9
+#define col 1
+#define qwt 2
+#define sym 3
+#define num 4
+#define nav 5
+#define lay 6
+#define stn 7
 
 &mt {
     tapping-term-ms = <220>;
@@ -191,16 +189,6 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
    ___  &mt LSHFT C_BRI_UP  &mt LCTRL C_VOL_UP  &mt LALT C_PREV   &mt LGUI C_PP   &kp C_NEXT          &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  ___  ___
    ___  &kp C_BRI_DN        &kp C_VOL_DN        &kp C_MUTE        ___             &out OUT_TOG        ___        ___            ___          ___        ___  ___
                                                                     ___  ___  ___     ___  ___  ___
-                        >;
-                };
-
-                teams_layer {
-                        label = "Teams";
-                        bindings = <
-    ___       ___                 ___                 ___               ___       ___              &kp RG(RS(K))   ___             ___             ___             ___       ___
-    ___       &mt LSHFT C_BRI_UP  &mt LCTRL C_VOL_UP  ___               ___       ___              ___             ___             ___             ___             ___       ___
-    ___       &kp C_BRI_DN        &kp C_VOL_DN        &kp C_MUTE        ___       ___              &kp RG(RS(O))   &kp RG(RS(M))   &kp RG(RS(E))   &kp RG(RS(H))   &tog met  ___
-                                                                             ___  ___  ___     ___  ___  ___
                         >;
                 };
 
