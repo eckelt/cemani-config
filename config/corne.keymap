@@ -107,7 +107,7 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
     ___    &kp Y      &kp Z        &kp U       &kp A        &kp Q           &kp P       &kp B       &kp M       &kp L        &kp F   ___
     ___    &kp C      &mt LCTRL S  &mt LALT I  &mt LGUI E   &kp O           &kp D       &mt RGUI T  &mt RALT N  &mt RCTRL R  &kp H   ___
     ___    &kp V      &kp X        &kp J       &kp DE_SEMI  &kp DE_SLASH    &kp W       &kp G       &kp COMMA   &kp DOT      &kp K   ___
-                               &sl uml  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
+                               &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
                         >;
                 };
 
