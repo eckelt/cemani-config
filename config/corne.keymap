@@ -12,6 +12,17 @@
 #include "../nodefree/helper.h"
 #include "../nodefree/keypos_def/keypos_42keys.h"
 
+#undef DE_LT
+#undef DE_GT
+#undef DE_LESS_THAN
+#undef DE_GREATER_THAN
+
+// Apple MacBook deutsche Tastatur verwendet Grave für <>
+#define DE_LESS_THAN (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE))
+#define DE_LT (DE_LESS_THAN)
+#define DE_GREATER_THAN (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE)))
+#define DE_GT (DE_GREATER_THAN)
+
 #define HOST_OS 2
 // activate macOS-mode for helper script
 #undef OS_UNICODE_LEAD
