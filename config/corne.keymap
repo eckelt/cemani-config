@@ -94,6 +94,7 @@ ZMK_BEHAVIOR(dot_gt, mod_morph,
 ZMK_BEHAVIOR(semi_col, mod_morph,
     bindings = <&kp DE_SEMI>, <&kp DE_COLON>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
+		keep-mods = <(MOD_LSFT|MOD_RSFT)>; 
 )
 
 
