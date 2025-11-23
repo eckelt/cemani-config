@@ -74,8 +74,13 @@ ZMK_BEHAVIOR(fslh_qm, mod_morph,
     keep-mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
+ZMK_BEHAVIOR(lt_macro, macro,
+    bindings = <&macro_release &kp LSHIFT &kp RSHIFT>  // Release alle Shifts
+             , <&macro_tap &kp GRAVE>;                  // Dann GRAVE ohne Shift
+)
+
 ZMK_BEHAVIOR(comma_lt, mod_morph,
-    bindings = <&kp DE_COMMA>, <&kp DE_LT>;
+    bindings = <&kp DE_COMMA>, <&lt_macro>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
