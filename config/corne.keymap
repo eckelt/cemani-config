@@ -77,7 +77,6 @@ ZMK_BEHAVIOR(fslh_qm, mod_morph,
 ZMK_BEHAVIOR(comma_lt, mod_morph,
     bindings = <&kp DE_COMMA>, <&kp DE_LT>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
-    keep-mods = <(MOD_LSFT|MOD_RSFT)>; 
 )
 
 ZMK_BEHAVIOR(dot_gt, mod_morph,
