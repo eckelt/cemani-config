@@ -97,6 +97,9 @@ ZMK_BEHAVIOR(semi_col, mod_morph,
 		keep-mods = <(MOD_LSFT|MOD_RSFT)>; 
 )
 
+ZMK_BEHAVIOR(shft_caps, tap_dance,
+    bindings = <&sk RSHFT>, <&caps_word>;
+)
 
 ZMK_COMBO(esc, &kp ESC, LT4 LT3, ALL, 30)
 ZMK_COMBO(studio, &studio_unlock, RT3 RT4, ALL, 30)
@@ -148,7 +151,7 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
     ___    &kp Y      &kp Z        &kp U       &kp A        &kp Q           &kp P       &kp B       &kp M       &kp L        &kp F   ___
     ___    &kp C      &mt LCTRL S  &mt LALT I  &mt LGUI E   &kp O           &kp D       &mt RGUI T  &mt RALT N  &mt RCTRL R  &kp H   ___
     ___    &kp V      &kp X        &kp J       &semi_col    &fslh_qm        &kp W       &kp G       &comma_lt   &dot_gt      &kp K   ___
-                               &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
+                               &kp ESC  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &shft_caps
                         >;
                 };
 
@@ -164,7 +167,7 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
     ___    &kp Q      &kp W        &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y        &kp SEMI   ___
     ___    &kp A      &mt LCTRL R  &mt LALT S  &mt LGUI T  &kp G           &kp M       &mt RGUI N  &mt RALT E  &mt RCTRL I  &kp O      ___
     ___    &kp Z      &kp X        &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT      &kp SLASH  ___
-                   &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
+                                            ___   ___   ___            ___   &lt_bspc sym 0   &sk RSHFT
                         >;
                 };
 
@@ -180,7 +183,7 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
    ___  &kp Q    &kp W       &kp E       &kp R       &kp T         &kp Y  &kp U       &kp I       &kp O        &kp P      ___
    ___  &kp A    &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G         &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &kp SEMI   ___
    ___  &kp Z    &kp X       &kp C       &kp V       &kp B         &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH   ___
-                      &sk LSHFT  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt_bspc sym 0  &sk RSHFT
+                                        ___   ___   ___             ___   ___   ___
                         >;
                 };
 
