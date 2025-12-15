@@ -41,7 +41,8 @@
 #define num 4
 #define nav 5
 #define lay 6
-#define stn 7
+#define bt 7
+#define stn 8
 
 &mt {
     tapping-term-ms = <220>;
@@ -113,9 +114,10 @@ ZMK_COMBO(hyp, &kp HYP, RH0 RH1, ALL, 120)
 ZMK_COMBO(toglay, &tog lay, LB4 LB3 LB2, ALL, 50)
 
 ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50)
-ZMK_COMBO(power2, &kp K_POWER, RT0 RT1 RT2, ALL, 50)
+ZMK_COMBO(power2, &kp C_POWER, RT0 RT1 RT2, ALL, 50)
 ZMK_COMBO(kb_power_1, &soft_off, LT4 LM4 LB4, ALL, 50)
 ZMK_COMBO(kb_power_2, &soft_off, RT4 RM4 RB4, ALL, 50)
+ZMK_COMBO(btrst, &mo bt, LH1 LH2, nav, 50)
 ZMK_COMBO(btrst, &bt BT_CLR, LB0 LB1, nav, 50)
 
 ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
@@ -222,15 +224,15 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
                 nav_layer {
                         label = "Media";
 //  ╭─────────────────────┬─────────────────────╮
-//  │ BT1 BT2 BT3 BT4 BT5 │ 🏡  ⤴️  ⤵️  🔚   |
-//  | 🔆  🔊  ⏮️ ⏯️ ⏭️ | ⬅️  ⬇️  ⬆️  ➡️   |
-//  | 🔅  🔉  🔇    OUT  |                    |
+//  │ 🔅  🔆  🔇  🔉  🔊 │ 🏡  ⤴️  ⤵️  🔚     |
+//  |         ⏮️  ⏯️  ⏭️ | ⬅️  ⬇️  ⬆️  ➡️     |
+//  |                     |                     |
 //  ╰───────╮ Sft Tab Spc │ Ret Bck Sft ╭───────╯
 //          ╰─────────────┴─────────────╯
                         bindings = <
-   ___  &bt BT_SEL 0        &bt BT_SEL 1        &bt BT_SEL 2      &bt BT_SEL 3    &bt BT_SEL 4        &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    ___  ___
-   ___  &mt LSHFT C_BRI_UP  &mt LCTRL C_VOL_UP  &mt LALT C_PREV   &mt LGUI C_PP   &kp C_NEXT          &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  ___  ___
-   ___  &kp C_BRI_DN        &kp C_VOL_DN        &kp C_MUTE        ___             &out OUT_TOG        ___        ___            ___          ___        ___  ___
+   ___  &kp C_BRI_DN    &kp C_BRI_UP    &kp C_MUTE        &kp C_VOL_DN    &kp C_VOL_UP        &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    ___  ___
+   ___  ___             &kp LCTRL       &mt LALT C_PREV   &mt LGUI C_PP   &kp C_NEXT          &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  ___  ___
+   ___  ___             ___             ___               ___             ___                 ___        ___            ___          ___        ___  ___
                                                                     ___  ___  ___     ___  ___  ___
                         >;
                 };
@@ -250,6 +252,23 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
                                         ___  ___  ___     ___  ___  ___
                         >;
                 };
+
+                bt_layer {
+                        label = "BT";
+//  ╭─────────────────────┬─────────────────────╮
+//  │ BT1 BT2 BT3 BT4 BT5 │                     |
+//  |                     |                     |
+//  |                 OUT |                     |
+//  ╰───────╮ Sft Tab Spc │ Ret Bck Sft ╭───────╯
+//          ╰─────────────┴─────────────╯
+                        bindings = <
+   ___  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4        ___  ___  ___  ___  ___  ___
+   ___  ___            ___            ___            ___            ___                 ___  ___  ___  ___  ___  ___
+   ___  ___            ___            ___            ___            &out OUT_TOG        ___  ___  ___  ___  ___  ___
+                                                                    ___  ___  ___     ___  ___  ___
+                        >;
+                };
+
 
                 steno_layer {
                         label = "Steno";
