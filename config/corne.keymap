@@ -41,7 +41,7 @@
 #define num 4
 #define nav 5
 #define lay 6
-#define bt 7
+#define btl 7
 #define stn 8
 
 &mt {
@@ -117,7 +117,7 @@ ZMK_COMBO(power1, &kp C_POWER, LT0 LT1 LT2, ALL, 50)
 ZMK_COMBO(power2, &kp C_POWER, RT0 RT1 RT2, ALL, 50)
 ZMK_COMBO(kb_power_1, &soft_off, LT4 LM4 LB4, ALL, 50)
 ZMK_COMBO(kb_power_2, &soft_off, RT4 RM4 RB4, ALL, 50)
-ZMK_COMBO(btayer, &mo bt, LH1 LH2, ALL, 50)
+ZMK_COMBO(btayer, &mo btl, LH1 LH2, ALL, 50)
 ZMK_COMBO(btrst, &bt BT_CLR, LB0 LB1, bt, 50)
 
 ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
