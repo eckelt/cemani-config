@@ -123,9 +123,6 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 };
 
 / {
-    chosen {
-        zmk,underglow = &led_strip;
-    };
 
         behaviors {
             lt_bspc: layer_tap_bspc_del {
@@ -304,5 +301,11 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
         color-mapping = <LED_COLOR_ID_GREEN
                          LED_COLOR_ID_RED
                          LED_COLOR_ID_BLUE>;
+    };
+};
+
+/ {
+    chosen {
+        zmk,underglow = &led_strip;
     };
 };
