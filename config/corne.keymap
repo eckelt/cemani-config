@@ -123,6 +123,10 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
 };
 
 / {
+    chosen {
+        zmk,underglow = &led_strip;
+    };
+
         behaviors {
             lt_bspc: layer_tap_bspc_del {
                 compatible = "zmk,behavior-hold-tap";
