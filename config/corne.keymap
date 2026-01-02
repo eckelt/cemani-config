@@ -16,6 +16,12 @@
 #undef DE_GT
 #undef DE_LESS_THAN
 #undef DE_GREATER_THAN
+#undef DE_AT_SIGN
+#undef DE_AT
+#undef DE_BACKSLASH
+#undef DE_LBRC
+#undef DE_RBRC
+#undef DE_PIPE
 
 // Apple MacBook deutsche Tastatur verwendet Grave für <>
 #define DE_LESS_THAN (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE))
@@ -29,7 +35,6 @@
 
 /* \ */
 #define DE_BACKSLASH (RA(RS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND))))
-#define DE_BSLH (DE_BACKSLASH)
 
 /* [ */
 #define DE_LBRC (RA(HID_USAGE_KEY_KEYBOARD_5_AND_PERCENT))
@@ -221,8 +226,8 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
                 num_layer {
                         label = "123";
 //  ╭─────────────────────┬─────────────────────╮
-//  │  F1  F2  F3  F4     │  *   7   8   9   +  |
-//  |  F5  F6  F7  F8     |  /   4   5   6   -  |
+//  │  F1  F2  F3  F4  <  │  *   7   8   9   +  |
+//  |  F5  F6  F7  F8  >  |  /   4   5   6   -  |
 //  |  F9 F10 F11 F12  =  |  :   1   2   3   ., |
 //  ╰───────╮ Sft Tab Spc │ Ret Bck  0  ╭───────╯
 //          ╰─────────────┴─────────────╯
