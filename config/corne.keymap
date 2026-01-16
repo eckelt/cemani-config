@@ -149,12 +149,12 @@ ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
             ae: ae {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&unicode U00E4>;
+                bindings = <&unicode 0x00E4>;
             };
             AE: AE {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&unicode U00C4>;
+                bindings = <&unicode 0x00C4>;
             };
         };
 
