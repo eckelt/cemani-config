@@ -6,57 +6,10 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <locale/keys_de.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include "../nodefree/helper.h"
 #include "../nodefree/keypos_def/keypos_42keys.h"
-
-#undef DE_LT
-#undef DE_GT
-#undef DE_LESS_THAN
-#undef DE_GREATER_THAN
-#undef DE_AT_SIGN
-#undef DE_AT
-#undef DE_BACKSLASH
-#undef DE_LBRC
-#undef DE_RBRC
-#undef DE_PIPE
-#undef DE_TILDE
-
-// Apple MacBook deutsche Tastatur verwendet Grave für <>
-#define DE_LESS_THAN (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))
-#define DE_LT (DE_LESS_THAN)
-#define DE_GREATER_THAN (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))
-#define DE_GT (DE_GREATER_THAN)
-
-/* @ */
-#define DE_AT_SIGN (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_L)))
-#define DE_AT (DE_AT_SIGN)
-
-/* \ */
-#define DE_BACKSLASH (RA(RS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND))))
-
-/* [ */
-#define DE_LBRC (RA(HID_USAGE_KEY_KEYBOARD_5_AND_PERCENT))
-
-/* ] */
-#define DE_RBRC (RA(HID_USAGE_KEY_KEYBOARD_6_AND_CARET))
-
-/* | */
-#define DE_PIPE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND)))
-
-/* ~ */
-#define DE_TILDE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_N)))
-
-ZMK_UNICODE_PAIR(ae,        N0, N0, E, N4,   N0, N0, C, N4)  // ä, Ä
-
-#define HOST_OS 2
-// activate macOS-mode for helper script
-#undef OS_UNICODE_LEAD
-#undef OS_UNICODE_TRAIL
-#define OS_UNICODE_LEAD &macro_press &kp LALT  // <- macOS compose sequence (must be activated in system preferences)
-#define OS_UNICODE_TRAIL &macro_release &kp LALT  // <- Releasing Left-Alt terminates unicode input on macOns
 
 #define ___ &trans
 #define MEH LS(LC(LALT))
@@ -93,30 +46,8 @@ ZMK_BEHAVIOR(bs_del, mod_morph,
 )
 
 ZMK_BEHAVIOR(dot_comma, mod_morph,
-    bindings = <&kp DE_DOT>, <&kp DE_COMMA>;
+    bindings = <&kp DOT>, <&kp COMMA>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
-)
-
-ZMK_BEHAVIOR(fslh_qm, mod_morph,
-    bindings = <&kp DE_FSLH>, <&kp DE_QMARK>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-    keep-mods = <(MOD_LSFT|MOD_RSFT)>;
-)
-
-ZMK_BEHAVIOR(comma_lt, mod_morph,
-    bindings = <&kp DE_COMMA>, <&kp DE_LESS_THAN>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-)
-
-ZMK_BEHAVIOR(dot_gt, mod_morph,
-    bindings = <&kp DE_DOT>, <&kp DE_GREATER_THAN>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-)
-
-ZMK_BEHAVIOR(semi_col, mod_morph,
-    bindings = <&kp DE_SEMI>, <&kp DE_COLON>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-		keep-mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
 ZMK_BEHAVIOR(shft_caps, tap_dance,
@@ -137,12 +68,67 @@ ZMK_COMBO(kb_power_2, &soft_off, RT4 RM4 RB4, ALL, 50)
 ZMK_COMBO(btlayer, &mo btl, LH1 LH2, ALL, 50)
 ZMK_COMBO(btrst, &bt BT_CLR, LB0 LB1, btl, 50)
 
-ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 50)
+ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 80)
 
-ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
-ZMK_UNICODE_PAIR( ae,   N0, N0,  E, N4,   N0, N0,  C, N4 )
-ZMK_UNICODE_PAIR( oe,   N0, N0,  F, N6,   N0, N0,  D, N6 )
-ZMK_UNICODE_PAIR( ue,   N0, N0,  F,  C,   N0, N0,  D,  C )
+ZMK_MACRO(ae,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp LA(U) &kp A>;
+)
+ZMK_MACRO(Ae,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp LA(U) &kp LS(A)>;
+)
+ZMK_MOD_MORPH(A_UMLAUT,
+    #binding-cells = <0>;
+    bindings = <&kp ae>, <&kp Ae>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+ZMK_MACRO(oe,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp LA(U) &kp O>;
+)
+ZMK_MACRO(Oe,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp LA(U) &kp LS(O)>;
+)
+ZMK_MOD_MORPH(O_UMLAUT,
+    #binding-cells = <0>;
+    bindings = <&kp oe>, <&kp Oe>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+ZMK_MACRO(ue,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp LA(U) &kp U>;
+)
+ZMK_MACRO(ue,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp LA(U) &kp LS(U)>;
+)
+ZMK_MOD_MORPH(U_UMLAUT,
+    #binding-cells = <0>;
+    bindings = <&kp ue>, <&kp ue>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+ZMK_MACRO(SZ,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp LA(S)>;
+)
+ZMK_MACRO(EURO,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp LA(LS(N2))>;
+)
+
 
 &soft_off {
     split-peripheral-off-on-press;
@@ -220,9 +206,9 @@ ZMK_UNICODE_PAIR( ue,   N0, N0,  F,  C,   N0, N0,  D,  C )
 //  ╰───────╮ Sft Tab Spc │ Ret Bck Sft ╭───────╯
 //          ╰─────────────┴─────────────╯
                         bindings = <
-   ___  &kp DE_EXCL   &kp DE_AT      &kp DE_U_UMLAUT  &kp DE_A_UMLAUT  &kp DE_PRCNT     &kp DE_CARET  &kp DE_AMPS   &kp DE_LPAR  &kp DE_RPAR  &kp DE_FSLH   ___
-   ___  &kp DE_HASH   &kp DE_SHARP_S &kp DE_STAR      &kp DE_EURO      &kp DE_O_UMLAUT  &kp DE_MINUS  &kp DE_PLUS   &kp DE_LBKT  &kp DE_RBKT  &kp DE_BSLH   ___
-   ___  &kp DE_DLLR   &kp DE_TILDE   &kp DE_GRAVE     &kp DE_SQT       &kp DE_DQT       &kp DE_UNDER  &kp DE_EQUAL  &kp DE_LBRC  &kp DE_RBRC  &kp DE_PIPE   ___
+   ___  &kp EXCL   &kp AT      &kp U_UMLAUT  &kp A_UMLAUT  &kp PRCNT     &kp CARET  &kp AMPS   &kp LPAR  &kp RPAR  &kp FSLH   ___
+   ___  &kp HASH   &kp SZ      &kp STAR      &kp EURO      &kp O_UMLAUT  &kp MINUS  &kp PLUS   &kp LBKT  &kp RBKT  &kp BSLH   ___
+   ___  &kp DLLR   &kp TILDE   &kp GRAVE     &kp SQT       &kp DQT       &kp UNDER  &kp EQUAL  &kp LBRC  &kp RBRC  &kp PIPE   ___
                                                       ___  ___  ___     ___  ___  ___
                         >;
                 };
@@ -236,9 +222,9 @@ ZMK_UNICODE_PAIR( ue,   N0, N0,  F,  C,   N0, N0,  D,  C )
 //  ╰───────╮ Sft Tab Spc │ Ret Bck  0  ╭───────╯
 //          ╰─────────────┴─────────────╯
                         bindings = <
-   ___  &kp F1        &kp F2        &kp F3       &kp F4       &ae            &kp DE_STAR   &kp N7       &kp N8       &kp N9        &kp DE_PLUS         ___
-   ___  &mt LSHFT F5  &mt LCTRL F6  &mt LALT F7  &mt LGUI F8  ___               &kp DE_FSLH   &mt RGUI N4  &mt RALT N5  &mt RCTRL N6  &mt RSHFT DE_MINUS  ___
-   ___  &kp F9        &kp F10       &kp F11      &kp F12      &kp DE_EQUAL      &kp DE_COLON  &kp N1       &kp N2       &kp N3        &dot_comma       ___
+   ___  &kp F1        &kp F2        &kp F3       &kp F4       &ae              &kp STAR   &kp N7       &kp N8       &kp N9        &kp PLUS         ___
+   ___  &mt LSHFT F5  &mt LCTRL F6  &mt LALT F7  &mt LGUI F8  ___              &kp FSLH   &mt RGUI N4  &mt RALT N5  &mt RCTRL N6  &mt RSHFT MINUS  ___
+   ___  &kp F9        &kp F10       &kp F11      &kp F12      &kp EQUAL        &kp COLON  &kp N1       &kp N2       &kp N3        &dot_comma       ___
                                                        ___  ___  ___              &kp RET   &bs_del   &mt RSHFT N0
                         >;
                 };
