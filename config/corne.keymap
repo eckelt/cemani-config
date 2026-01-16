@@ -70,12 +70,14 @@ ZMK_COMBO(btrst, &bt BT_CLR, LB0 LB1, btl, 50)
 
 ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 80)
 
-ZMK_MOD_MORPH(bs_del_num,
+// tap: backspace | shift + tap: delete | hold: num layer
+ZMK_BEHAVIOR(bs_del_num, mod_morph,
     bindings = <&lt NUM BSPC>, <&kp DEL>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
-ZMK_MACRO(win_sleep,
+// windows sleep macro
+ZMK_BEHAVIOR(win_sleep, macro,
     wait-ms = <100>;
     tap-ms = <5>;
     bindings = <&kp LG(X) &kp U &kp S>;
