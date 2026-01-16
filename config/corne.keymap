@@ -203,10 +203,10 @@ ZMK_BEHAVIOR(EURO, macro,
 //  ╰───────╮ Sft Tab Spc │ Ret Bck Sft ╭───────╯
 //          ╰─────────────┴─────────────╯
                         bindings = <
-   &kp EXCL   &kp AT      &kp U_UMLAUT  &kp A_UMLAUT  &kp PRCNT     &kp CARET  &kp AMPS   &kp LPAR  &kp RPAR  &kp FSLH
-   &kp HASH   &SZ         &kp STAR      &EURO         &kp O_UMLAUT  &kp MINUS  &kp PLUS   &kp LBKT  &kp RBKT  &kp BSLH
-   &kp DLLR   &kp TILDE   &kp GRAVE     &kp SQT       &kp DQT       &kp UNDER  &kp EQUAL  &kp LBRC  &kp RBRC  &kp PIPE
-                                                      ___  ___  ___     ___  ___  ___
+   &kp EXCL   &kp AT      &U_UMLAUT   &A_UMLAUT   &kp PRCNT     &kp CARET  &kp AMPS   &kp LPAR  &kp RPAR  &kp FSLH
+   &kp HASH   &SZ         &kp STAR    &EURO       &O_UMLAUT     &kp MINUS  &kp PLUS   &kp LBKT  &kp RBKT  &kp BSLH
+   &kp DLLR   &kp TILDE   &kp GRAVE   &kp SQT     &kp DQT       &kp UNDER  &kp EQUAL  &kp LBRC  &kp RBRC  &kp PIPE
+                                             ___  ___  ___     ___  ___  ___
                         >;
                 };
 
