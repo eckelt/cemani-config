@@ -75,7 +75,14 @@ ZMK_MOD_MORPH(bs_del_num,
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
-ZMK_BEHAVIOR(ael, macro,
+ZMK_MACRO(win_sleep,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp LG(X) &kp U &kp S>;
+)
+
+
+ZMK_MACRO(ael,
     wait-ms = <100>;
     tap-ms = <5>;
     bindings = <&kp LA(U) &kp A>;
