@@ -155,9 +155,11 @@ ZMK_BEHAVIOR(EURO, macro,
 //          ╰─────────────┴─────────────╯
                         label = "ABC";
                         bindings = <
-    &kp Y      &kp Z        &kp U       &kp A        &kp Q           &kp P       &kp B       &kp M       &kp L        &kp F
-    &kp C      &mt LCTRL S  &mt LALT I  &mt LGUI E   &kp O           &kp D       &mt RGUI T  &mt RALT N  &mt RCTRL R  &kp H
-    &kp V      &kp X        &kp J       &kp SEMI     &kp SLASH       &kp W       &kp G       &kp COMMA   &kp DOT      &kp K
+// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+
+    ___  &kp Y      &kp Z        &kp U       &kp A        &kp Q           &kp P       &kp B       &kp M       &kp L        &kp F  ___
+    ___  &kp C      &mt LCTRL S  &mt LALT I  &mt LGUI E   &kp O           &kp D       &mt RGUI T  &mt RALT N  &mt RCTRL R  &kp H  ___
+    ___  &kp V      &kp X        &kp J       &kp SEMI     &kp SLASH       &kp W       &kp G       &kp COMMA   &kp DOT      &kp K  ___
                                &lt btl ESC  &lt num TAB  &lt nav SPACE       &mt MEH RET  &lt sym BSPC  &shft_caps
                         >;
                 };
@@ -171,9 +173,9 @@ ZMK_BEHAVIOR(EURO, macro,
 //  ╰───────╮ Sft Tab Spc │ Ret Bck Sft ╭───────╯
 //          ╰─────────────┴─────────────╯
                         bindings = <
-    &kp Q      &kp W        &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y        &kp SEMI
-    &kp A      &mt LCTRL R  &mt LALT S  &mt LGUI T  &kp G           &kp M       &mt RGUI N  &mt RALT E  &mt RCTRL I  &kp O
-    &kp Z      &kp X        &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT      &kp SLASH
+    ___  &kp Q      &kp W        &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y        &kp SEMI  ___
+    ___  &kp A      &mt LCTRL R  &mt LALT S  &mt LGUI T  &kp G           &kp M       &mt RGUI N  &mt RALT E  &mt RCTRL I  &kp O  ___
+    ___  &kp Z      &kp X        &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT      &kp SLASH  ___
                                             ___   ___   ___            ___   &lt_bspc sym 0   &sk RSHFT
                         >;
                 };
@@ -187,9 +189,9 @@ ZMK_BEHAVIOR(EURO, macro,
 //  ╰───────╮ Sft Tab Spc │ Ret Bck Sft ╭───────╯
 //          ╰─────────────┴─────────────╯
                         bindings = <
-   &kp Q    &kp W       &kp E       &kp R       &kp T         &kp Y  &kp U       &kp I       &kp O        &kp P
-   &kp A    &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G         &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &kp SEMI
-   &kp Z    &kp X       &kp C       &kp V       &kp B         &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH
+   ___  &kp Q    &kp W       &kp E       &kp R       &kp T         &kp Y  &kp U       &kp I       &kp O        &kp P  ___
+   ___  &kp A    &mt LCTRL S &mt LALT D  &mt LGUI F  &kp G         &kp H  &mt RGUI J  &mt RALT K  &mt RCTRL L  &kp SEMI  ___
+   ___  &kp Z    &kp X       &kp C       &kp V       &kp B         &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH  ___
                                         ___   ___   ___             ___   ___   ___
                         >;
                 };
@@ -203,9 +205,9 @@ ZMK_BEHAVIOR(EURO, macro,
 //  ╰───────╮ Sft Tab Spc │ Ret Bck Sft ╭───────╯
 //          ╰─────────────┴─────────────╯
                         bindings = <
-   &kp EXCL   &kp AT      &U_UMLAUT   &A_UMLAUT   &kp PRCNT     &kp CARET  &kp AMPS   &kp LPAR  &kp RPAR  &kp FSLH
-   &kp HASH   &SZ         &kp STAR    &EURO       &O_UMLAUT     &kp MINUS  &kp PLUS   &kp LBKT  &kp RBKT  &kp BSLH
-   &kp DLLR   &kp TILDE   &kp GRAVE   &kp SQT     &kp DQT       &kp UNDER  &kp EQUAL  &kp LBRC  &kp RBRC  &kp PIPE
+   ___  &kp EXCL   &kp AT      &U_UMLAUT   &A_UMLAUT   &kp PRCNT     &kp CARET  &kp AMPS   &kp LPAR  &kp RPAR  &kp FSLH  ___
+   ___  &kp HASH   &SZ         &kp STAR    &EURO       &O_UMLAUT     &kp MINUS  &kp PLUS   &kp LBKT  &kp RBKT  &kp BSLH  ___
+   ___  &kp DLLR   &kp TILDE   &kp GRAVE   &kp SQT     &kp DQT       &kp UNDER  &kp EQUAL  &kp LBRC  &kp RBRC  &kp PIPE  ___
                                              ___  ___  ___     ___  ___  ___
                         >;
                 };
@@ -219,9 +221,9 @@ ZMK_BEHAVIOR(EURO, macro,
 //  ╰───────╮ Sft Tab Spc │ Ret Bck  0  ╭───────╯
 //          ╰─────────────┴─────────────╯
                         bindings = <
-   &kp F1        &kp F2        &kp F3       &kp F4       ___              &kp STAR   &kp N7       &kp N8       &kp N9        &kp PLUS
-   &mt LSHFT F5  &mt LCTRL F6  &mt LALT F7  &mt LGUI F8  ___              &kp FSLH   &mt RGUI N4  &mt RALT N5  &mt RCTRL N6  &mt RSHFT MINUS
-   &kp F9        &kp F10       &kp F11      &kp F12      &kp EQUAL        &kp COLON  &kp N1       &kp N2       &kp N3        &dot_comma
+   ___  &kp F1        &kp F2        &kp F3       &kp F4       ___              &kp STAR   &kp N7       &kp N8       &kp N9        &kp PLUS  ___
+   ___  &mt LSHFT F5  &mt LCTRL F6  &mt LALT F7  &mt LGUI F8  ___              &kp FSLH   &mt RGUI N4  &mt RALT N5  &mt RCTRL N6  &mt RSHFT MINUS  ___
+   ___  &kp F9        &kp F10       &kp F11      &kp F12      &kp EQUAL        &kp COLON  &kp N1       &kp N2       &kp N3        &dot_comma  ___
                                                        ___  ___  ___              &kp RET   &bs_del   &mt RSHFT N0
                         >;
                 };
@@ -235,9 +237,9 @@ ZMK_BEHAVIOR(EURO, macro,
 //  ╰───────╮ Sft Tab Spc │ Ret Bck Sft ╭───────╯
 //          ╰─────────────┴─────────────╯
                         bindings = <
-   &kp C_BRI_DN    &kp C_BRI_UP    &kp C_MUTE        &kp C_VOL_DN    &kp C_VOL_UP        &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    ___
-   ___             &kp LCTRL       &mt LALT C_PREV   &mt LGUI C_PP   &kp C_NEXT          &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  ___
-   ___             ___             ___               ___             ___                 ___        ___            ___          ___        ___
+   ___  &kp C_BRI_DN    &kp C_BRI_UP    &kp C_MUTE        &kp C_VOL_DN    &kp C_VOL_UP        &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    ___
+   ___  ___             &kp LCTRL       &mt LALT C_PREV   &mt LGUI C_PP   &kp C_NEXT          &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  ___
+   ___  ___             ___             ___               ___             ___                 ___        ___            ___          ___        ___
                                                                     ___  ___  ___     ___  ___  ___
                         >;
                 };
@@ -251,9 +253,9 @@ ZMK_BEHAVIOR(EURO, macro,
 //  ╰───────╮                   │                   ╭───────╯
 //          ╰───────────────────┴───────────────────╯
                         bindings = <
-   &to neo  &to col  &to qwt  &to sym  &to num         ___    ___    ___    ___    ___
-   &to nav  &to stn  &to btl  ___      ___             ___    ___    ___    ___    ___
-   ___      ___      ___      ___      ___             ___    ___    ___    ___    ___
+   ___  &to neo  &to col  &to qwt  &to sym  &to num         ___    ___    ___    ___    ___  ___
+   ___  &to nav  &to stn  &to btl  ___      ___             ___    ___    ___    ___    ___  ___
+   ___  ___      ___      ___      ___      ___             ___    ___    ___    ___    ___  ___
                                         ___  ___  ___     ___  ___  ___
                         >;
                 };
@@ -267,9 +269,9 @@ ZMK_BEHAVIOR(EURO, macro,
 //  ╰───────╮ Sft Tab Spc │ Ret Bck Sft ╭───────╯
 //          ╰─────────────┴─────────────╯
                         bindings = <
-    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4        ___  ___  ___  ___  ___
-    ___            ___            ___            ___            ___                 ___  ___  ___  ___  ___
-    ___            ___            ___            ___            &out OUT_TOG        ___  ___  ___  ___  ___
+    ___  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4        ___  ___  ___  ___  ___  ___
+    ___  ___            ___            ___            ___            ___                 ___  ___  ___  ___  ___  ___
+    ___  ___            ___            ___            ___            &out OUT_TOG        ___  ___  ___  ___  ___  ___
                                                                  ___  ___  ___     ___  ___  ___
                         >;
                 };
@@ -284,9 +286,9 @@ ZMK_BEHAVIOR(EURO, macro,
 //  ╰───────╮  -  C   V   │  N   M   =  ╭───────╯
 //          ╰─────────────┴─────────────╯
                         bindings = <
-   &kp Q    &kp W    &kp E    &kp R    &kp T         &kp U    &kp I    &kp O    &kp P     &kp LBKT
-   &kp A    &kp S    &kp D    &kp F    &kp G         &kp J    &kp K    &kp L    &kp SEMI  &kp SQT
-   ___      ___      ___      ___      ___           ___      ___      ___      ___      ___
+   ___  &kp Q    &kp W    &kp E    &kp R    &kp T         &kp U    &kp I    &kp O    &kp P     &kp LBKT  ___
+   ___  &kp A    &kp S    &kp D    &kp F    &kp G         &kp J    &kp K    &kp L    &kp SEMI  &kp SQT  ___
+   ___  ___      ___      ___      ___      ___           ___      ___      ___      ___      ___  ___
                              &kp MINUS   &kp C    &kp V         &kp N   &kp M   &kp EQUAL
                         >;
                 };
