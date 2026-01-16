@@ -107,7 +107,7 @@ ZMK_BEHAVIOR(ue, macro,
     tap-ms = <5>;
     bindings = <&kp LA(U) &kp U>;
 )
-ZMK_BEHAVIOR(ue, macro,
+ZMK_BEHAVIOR(Ue, macro,
     wait-ms = <100>;
     tap-ms = <5>;
     bindings = <&kp LA(U) &kp LS(U)>;
