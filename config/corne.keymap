@@ -80,8 +80,7 @@ ZMK_BEHAVIOR(Ae, macro,
     tap-ms = <5>;
     bindings = <&kp LA(U) &kp LS(A)>;
 )
-ZMK_BEHAVIOR(A_UMLAUT, mod_morph,
-    #binding-cells = <0>;
+ZMK_MOD_MORPH(A_UMLAUT,
     bindings = <&kp ae>, <&kp Ae>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
@@ -96,8 +95,7 @@ ZMK_BEHAVIOR(Oe, macro,
     tap-ms = <5>;
     bindings = <&kp LA(U) &kp LS(O)>;
 )
-ZMK_BEHAVIOR(O_UMLAUT, mod_morph,
-    #binding-cells = <0>;
+ZMK_MOD_MORPH(O_UMLAUT,
     bindings = <&kp oe>, <&kp Oe>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
@@ -112,9 +110,8 @@ ZMK_BEHAVIOR(Ue, macro,
     tap-ms = <5>;
     bindings = <&kp LA(U) &kp LS(U)>;
 )
-ZMK_BEHAVIOR(U_UMLAUT, mod_morph,
-    #binding-cells = <0>;
-    bindings = <&kp ue>, <&kp ue>;
+ZMK_MOD_MORPH(U_UMLAUT,
+    bindings = <&kp ue>, <&kp Ue>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
