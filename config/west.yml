@@ -5,6 +5,8 @@ manifest:
     # - name: m165437
     #   url-base: https://github.com/M165437
     # support nice_oled and nice_epaper
+    - name: urob
+      url-base: https://github.com/urob
     - name: joelspadin
       url-base: https://github.com/joelspadin
     - name: mctechnology17
