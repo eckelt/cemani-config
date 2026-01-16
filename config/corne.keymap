@@ -70,48 +70,54 @@ ZMK_COMBO(btrst, &bt BT_CLR, LB0 LB1, btl, 50)
 
 ZMK_COMBO(capsw, &caps_word, LH2 RH2, ALL, 80)
 
-ZMK_BEHAVIOR(ae, macro,
+ZMK_MOD_MORPH(bs_del_num,
+    bindings = <&lt NUM BSPC>, <&kp DEL>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+ZMK_BEHAVIOR(ael, macro,
     wait-ms = <100>;
     tap-ms = <5>;
     bindings = <&kp LA(U) &kp A>;
 )
-ZMK_BEHAVIOR(Ae, macro,
+
+ZMK_BEHAVIOR(aeu, macro,
     wait-ms = <100>;
     tap-ms = <5>;
     bindings = <&kp LA(U) &kp LS(A)>;
 )
 ZMK_MOD_MORPH(A_UMLAUT,
-    bindings = <&kp ae>, <&kp Ae>;
+    bindings = <&kp ael>, <&kp aeu>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
-ZMK_BEHAVIOR(oe, macro,
+ZMK_BEHAVIOR(oel, macro,
     wait-ms = <100>;
     tap-ms = <5>;
     bindings = <&kp LA(U) &kp O>;
 )
-ZMK_BEHAVIOR(Oe, macro,
+ZMK_BEHAVIOR(oeu, macro,
     wait-ms = <100>;
     tap-ms = <5>;
     bindings = <&kp LA(U) &kp LS(O)>;
 )
 ZMK_MOD_MORPH(O_UMLAUT,
-    bindings = <&kp oe>, <&kp Oe>;
+    bindings = <&kp oel>, <&kp oeu>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
-ZMK_BEHAVIOR(ue, macro,
+ZMK_BEHAVIOR(uel, macro,
     wait-ms = <100>;
     tap-ms = <5>;
     bindings = <&kp LA(U) &kp U>;
 )
-ZMK_BEHAVIOR(Ue, macro,
+ZMK_BEHAVIOR(ueu, macro,
     wait-ms = <100>;
     tap-ms = <5>;
     bindings = <&kp LA(U) &kp LS(U)>;
 )
 ZMK_MOD_MORPH(U_UMLAUT,
-    bindings = <&kp ue>, <&kp Ue>;
+    bindings = <&kp uel>, <&kp ueu>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
