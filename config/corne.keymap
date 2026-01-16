@@ -81,7 +81,7 @@ ZMK_BEHAVIOR(aeu, macro,
     bindings = <&kp LA(U) &kp LS(A)>;
 )
 ZMK_MOD_MORPH(A_UMLAUT,
-    bindings = <&kp ael>, <&kp aeu>;
+    bindings = <&ael>, <&aeu>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
@@ -96,7 +96,7 @@ ZMK_BEHAVIOR(oeu, macro,
     bindings = <&kp LA(U) &kp LS(O)>;
 )
 ZMK_MOD_MORPH(O_UMLAUT,
-    bindings = <&kp oel>, <&kp oeu>;
+    bindings = <&oel>, <&oeu>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
@@ -111,7 +111,7 @@ ZMK_BEHAVIOR(ueu, macro,
     bindings = <&kp LA(U) &kp LS(U)>;
 )
 ZMK_MOD_MORPH(U_UMLAUT,
-    bindings = <&kp uel>, <&kp ueu>;
+    bindings = <&uel>, <&ueu>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
@@ -204,7 +204,7 @@ ZMK_BEHAVIOR(EURO, macro,
 //          ╰─────────────┴─────────────╯
                         bindings = <
    &kp EXCL   &kp AT      &kp U_UMLAUT  &kp A_UMLAUT  &kp PRCNT     &kp CARET  &kp AMPS   &kp LPAR  &kp RPAR  &kp FSLH
-   &kp HASH   &kp SZ      &kp STAR      &kp EURO      &kp O_UMLAUT  &kp MINUS  &kp PLUS   &kp LBKT  &kp RBKT  &kp BSLH
+   &kp HASH   &SZ         &kp STAR      &EURO         &kp O_UMLAUT  &kp MINUS  &kp PLUS   &kp LBKT  &kp RBKT  &kp BSLH
    &kp DLLR   &kp TILDE   &kp GRAVE     &kp SQT       &kp DQT       &kp UNDER  &kp EQUAL  &kp LBRC  &kp RBRC  &kp PIPE
                                                       ___  ___  ___     ___  ___  ___
                         >;
