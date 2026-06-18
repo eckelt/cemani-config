@@ -134,12 +134,12 @@ ZMK_BEHAVIOR(EURO, macro,
 
 / {
         behaviors {
-            lt_bspc: layer_tap_bspc_del {
+            lt_qt: layer_tap_quick_tap {
                 compatible = "zmk,behavior-hold-tap";
-                label = "LAYER_TAP_BACKSPACE_DELETE";
+                label = "LAYER_TAP_QUICK_TAP";
                 #binding-cells = <2>;
-                bindings = <&mo>, <&bs_del>;
-                tapping-term-ms = <280>;
+                bindings = <&mo>, <&kp>;
+                tapping-term-ms = <200>;
                 quick-tap-ms = <200>;
                 flavor = "balanced";
             };
@@ -164,7 +164,7 @@ ___     &kp C      &mt LCTRL S   &mt LALT I    &mt LGUI E      &kp O            
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
 ___     &kp V         &kp X        &kp J         &kp SEMI     &kp SLASH           &kp W         &kp G      &kp COMMA       &kp DOT       &kp K      ___
 // ╰───────────────────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼───────────────────────────╯
-                                 &shft_caps    &lt num TAB  &lt nav SPACE      &mt MEH RET  &lt sym BSPC   &shft_caps
+                                 &shft_caps    &lt num TAB  &lt_qt nav SPACE  &mt MEH RET  &lt_qt sym BSPC   &shft_caps
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
@@ -181,7 +181,7 @@ ___     &kp V         &kp X        &kp J         &kp SEMI     &kp SLASH         
     ___  &kp Q      &kp W        &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y        &kp SEMI   ___
     ___  &kp A      &mt LCTRL R  &mt LALT S  &mt LGUI T  &kp G           &kp M       &mt RGUI N  &mt RALT E  &mt RCTRL I  &kp O      ___
     ___  &kp Z      &kp X        &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT      &kp SLASH  ___
-                                            ___   ___   ___            ___   &lt_bspc sym 0   &sk RSHFT
+                                            ___   ___   ___            ___   &lt_qt sym BSPC   &sk RSHFT
                         >;
                 };
 
