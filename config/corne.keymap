@@ -141,7 +141,7 @@ ZMK_BEHAVIOR(EURO, macro,
                 bindings = <&mo>, <&kp>;
                 tapping-term-ms = <200>;
                 quick-tap-ms = <200>;
-                flavor = "balanced";
+                flavor = "hold-preferred";
             };
         };
 
